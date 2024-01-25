@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Dnavbutton from './components/dnavbutton.js';
+import Slideup from './components/slideup.js';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {/* main body */}
+      <div class="">
+
+      {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
+      <Slideup>
+        <h1>Preston Tom-Ying</h1>
+      </Slideup>
+
+
+
+      {/* projects (dont put experiences, lame) */}
+
+      {/* Hobbies (travelling) */}
+        
+      </div>
+
+
+      <Dnavbutton text="Countries"></Dnavbutton>
     </div>
   );
 }

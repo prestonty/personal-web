@@ -5,7 +5,10 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'cloudBurst': '#1e2949',
+      'white': '#f7fbfc',
+      'black': '#1a1c24',
+      'grey': '#252a36',
+      'theme': ''
     },
     extend: {},
   },

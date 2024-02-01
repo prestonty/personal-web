@@ -8,13 +8,14 @@ function App() {
 
     return (
         <div className="App">
+            <div className="bg-[#1a1c24]">
             {/* Header */}
-            <Header />
-
+            {/* <Header /> */}
+            {/* <button className="bg-[#252a36]">YOOO</button> */}
             {/* main body */}
             <div class="">
                 {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
-                <h1 class="animate-fade-up animate-duration-[1000ms] animate-ease-in animate-delay-[200ms]">
+                <h1 className="animate-fade-up animate-duration-[1000ms] animate-ease-in animate-delay-[200ms] text-8xl font-work-sans font-semibold font-white">
                     Preston Tom-Ying
                 </h1>
 
@@ -77,6 +78,7 @@ function App() {
 
             {/* <Navbutton text="Countries"></Navbutton> */}
             <Footer />
+            </div>
         </div>
     );
 }

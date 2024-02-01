@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/public/assets/fonts/Work_Sans/static/WorkSans-Regular.ttf') format('truetype'),
+        url('/public/assets/fonts/Work_Sans/static/WorkSans-ExtraLight.ttf') format('truetype'),
+        url('/public/assets/fonts/Work_Sans/static/WorkSans-SemiBold.ttf') format('truetype'),
+    /* Add more file formats if necessary */
+}
+
+.font-work-sans {
+    font-family: 'Work Sans', sans-serif;
+}

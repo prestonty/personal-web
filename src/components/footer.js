@@ -6,6 +6,7 @@ export default function Footer() {
             <p>Follow Me on Socials</p>
             <ul>
                 {/* maybe add instagram and facebook or something */}
+                {/* replace these with logos */}
                 <li>
                     <a href="https://www.linkedin.com/in/prestonty/">
                         LinkedIn

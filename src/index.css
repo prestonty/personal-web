@@ -7,6 +7,8 @@
     src: url('/public/assets/fonts/Work_Sans/static/WorkSans-Regular.ttf') format('truetype'),
         url('/public/assets/fonts/Work_Sans/static/WorkSans-ExtraLight.ttf') format('truetype'),
         url('/public/assets/fonts/Work_Sans/static/WorkSans-SemiBold.ttf') format('truetype'),
+        url('/public/assets/fonts/Work_Sans/static/WorkSans-Thin.ttf') format('truetype'),
+        url('/public/assets/fonts/Work_Sans/static/WorkSans-Light.ttf') format('truetype'),
     /* Add more file formats if necessary */
 }
 

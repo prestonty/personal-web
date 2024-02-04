@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 
 import Navbar from "./components/Navbar";
 import Laptop from "./components/Laptop";
+import Playlist from "./components/Playlist";
 import Project from "./components/Project";
 import Document from "./components/Document";
 
@@ -17,7 +18,10 @@ function App() {
                 <Navbar />
 
                 {/* HOME START ------------------------------------------------------- */}
-                <div class="mx-[15rem] px-[100px] w-[1440px] h-[790px]">
+                <div
+                    id="#home"
+                    class="mx-[15rem] px-[100px] w-[1440px] h-[790px]"
+                >
                     {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
                     <div class="flex h-[420px] mt-[6rem] items-center justify-center">
                         {/* mr-36 mb-[25rem]*/}
@@ -49,25 +53,28 @@ function App() {
                 </div>
                 {/* HOME END ------------------------------------------------------- */}
 
-                {/* Put this code somewhere */}
-                {/* <div class="flex"> */}
-                {/* <div class="mt-10"> */}
-                {/* THIS AINT LIGHTENING!!! */}
-                {/* <h3 class="text-xl font-light"> */}
-                {/* Latest Spotify Sauce */}
-                {/* </h3> */}
-                {/* <ul>spotify icons of the music</ul> */}
-                {/* </div> */}
-                {/* <div class="border-2 ml-[600px] h-[450px]"> */}
-                {/* <Laptop /> */}
-                {/* <p class="">Try clicking on me and pressing WASD!</p> */}
-                {/* </div> */}
-                {/* spotify API (BACKEND REQUIRED) */}
-                {/* </div> */}
-                {/* Laptop code */}
+                {/* FUN CORNER START ------------------------------------------------------- */}
+                <div id="#fun" class="m-auto px-[50px] w-[1440px] h-[600px]">
+                    <h3 class="text-4xl font-light text-center mb-16">
+                        Code Jam Corner
+                    </h3>
+                    <div class="flex">
+                        <Playlist />
+                        <div class="w-[600px] h-[485px]">
+                            <p class="absolute mt-8 ml-40 text-silver">
+                                Try clicking on the laptop and pressing WASD!
+                            </p>
+                            <Laptop />
+                        </div>
+                    </div>
+                </div>
+                {/* FUN CORNER END ------------------------------------------------------- */}
 
                 {/* PROJECTS START ------------------------------------------------------- */}
-                <div class="mx-[15rem] px-[100px] mt-[140px] border-2 w-[1440px] h-[860px] mb-32">
+                <div
+                    id="#projects"
+                    class="mx-[15rem] px-[100px] mt-[140px] w-[1440px] h-[860px] mb-32"
+                >
                     <h2 class="font-semibold text-6xl" id="#projects">
                         Projects
                     </h2>
@@ -88,21 +95,25 @@ function App() {
                 </div>
                 {/* PROJECTS END ------------------------------------------------------- */}
 
+                {/* I AM REMOVING THIS SECTION FOR NOW CAUSE IT PISSES ME OFF */}
                 {/* EXPERIENCE START ------------------------------------------------------- */}
-                <div class="items-center mx-[15rem] px-[100px] border-2 w-[1440px] h-[860px] mb-32">
+                {/* <div id="#experience" class="items-center mx-[15rem] px-[100px] border-2 w-[1440px] h-[860px] mb-32">
                     <h2 class="font-semibold text-6xl" id="#experience">
                         Experience
-                    </h2>
-                    <Document />
-                    {/* make components containing elements to projects */}
-                    {/* name of project, picture of project, brief description, technologies used (in expanded section) */}
-                    {/* I SHOULD PUT THE LOGOS OF ALL THE COMPANIES I WORKED FOR ON THE WEBSITE, KINDA LIKE SPONSORS BUT NOT REALLY?? idk if this a good idea */}
-                    {/* HACKATHONS MIGHT ACTUALLY BE WORTHY */}
-                </div>
+                    </h2> */}
+                {/* <Document /> */}
+                {/* make components containing elements to projects */}
+                {/* name of project, picture of project, brief description, technologies used (in expanded section) */}
+                {/* I SHOULD PUT THE LOGOS OF ALL THE COMPANIES I WORKED FOR ON THE WEBSITE, KINDA LIKE SPONSORS BUT NOT REALLY?? idk if this a good idea */}
+                {/* HACKATHONS MIGHT ACTUALLY BE WORTHY */}
+                {/* </div> */}
                 {/* EXPERIENCE END ------------------------------------------------------- */}
 
                 {/* TRAVELS START ------------------------------------------------------- */}
-                <div class="items-center mx-[15rem] px-[100px] border-2 w-[1440px] h-[860px] mb-32">
+                <div
+                    id="#travels"
+                    class="items-center mx-[15rem] px-[100px] border-2 w-[1440px] h-[860px] mb-32"
+                >
                     <h2 class="font-semibold text-6xl" id="#travels">
                         Travels
                     </h2>

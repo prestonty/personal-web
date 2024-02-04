@@ -73,7 +73,7 @@ function App() {
                 {/* PROJECTS START ------------------------------------------------------- */}
                 <div
                     id="#projects"
-                    class="mx-[15rem] px-[100px] mt-[140px] w-[1440px] h-[860px] mb-32"
+                    class="mx-[15rem] px-[100px] mt-[180px] w-[1440px] h-[860px] mb-32"
                 >
                     <h2 class="font-semibold text-6xl" id="#projects">
                         Projects

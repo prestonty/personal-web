@@ -61,7 +61,7 @@ function App() {
                     <div class="flex">
                         <Playlist />
                         <div class="w-[600px] h-[485px]">
-                            <p class="absolute mt-8 ml-40 text-silver">
+                            <p class="absolute ml-40 text-silver">
                                 Try clicking on the laptop and pressing WASD!
                             </p>
                             <Laptop />

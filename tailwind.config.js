@@ -8,6 +8,7 @@ module.exports = {
             grey: "#252a36",
             blue: "#4968E4",
             silver: "#9da4a6",
+            purple: "#9491E3",
             theme: "",
         },
         extend: {},

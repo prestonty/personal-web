@@ -7,6 +7,9 @@ import Laptop from "./components/Laptop";
 import Playlist from "./components/Playlist";
 import Project from "./components/Project";
 import Document from "./components/Document";
+import Earth from "./components/Earth";
+
+import Japan from "./country-pages/Japan";
 
 function App() {
     let role = "Software Developer";
@@ -59,6 +62,7 @@ function App() {
                         Code Jam Corner
                     </h3>
                     <div class="flex">
+                        {/* <img class="absolute mt-[100px] mr-[150px]" src="assets/purpleDots.png" /> */}
                         <Playlist />
                         <div class="w-[600px] h-[485px]">
                             <p class="absolute ml-40 text-silver">
@@ -117,28 +121,11 @@ function App() {
                     <h2 class="font-semibold text-6xl" id="#travels">
                         Travels
                     </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
-                    </p>
+                    <p>Welcome to [Hong Kong]</p>
+                    <div class="w-[500px] h-[450px] border-2">
+                        <Earth />
+                    </div>
+                    <Japan/>
                     {/* make a globe that you can interact with with dots with all the countries you visited */}
                 </div>
                 {/* TRAVELS END ------------------------------------------------------- */}

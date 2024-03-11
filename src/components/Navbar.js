@@ -10,6 +10,7 @@ export default function Navbar(props) {
                             src="assets\logos\white-logo.png"
                             width={172}
                             height={89}
+                            alt="logo"
                         />
                     </a>
                 </li>

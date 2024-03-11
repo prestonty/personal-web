@@ -1,5 +1,7 @@
-import Navbutton from "./components/Navbar";
-import Header from "./components/Header";
+import {useState} from "react";
+
+// import Navbutton from "./components/Navbar";
+// import Header from "./components/Header";
 import { SocialIcon } from 'react-social-icons'
 import Footer from "./components/Footer";
 
@@ -7,13 +9,15 @@ import Navbar from "./components/Navbar";
 import Laptop from "./components/Laptop";
 import Playlist from "./components/Playlist";
 import Project from "./components/Project";
-import Document from "./components/Document";
+// import Document from "./components/Document";
 import Earth from "./components/Earth";
 
 import Japan from "./countryPages/Japan";
 
 function App() {
-    let role = "Software Developer";
+    // let role = "Software Developer";
+
+    const [destination, setDestination] = useState("Japan");
 
     return (
         <div className="App">
@@ -24,7 +28,7 @@ function App() {
                 {/* HOME START ------------------------------------------------------- */}
                 <div
                     id="#home"
-                    className="mx-[15rem] px-[100px] w-[1440px] h-[790px]"
+                    className="mx-[15rem] px-[100px] w-auto h-[790px]"
                 >
                     {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
                     <div className="flex h-[420px] mt-[6rem] items-center justify-center">
@@ -35,10 +39,11 @@ function App() {
                             </h1>
 
                             <div className="mt-16">
-                                <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2000ms] text-2xl">
+                                <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2000ms] text-xl">
                                     Hi, I am a Software Developer
                                 </p>
-                                <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2500ms] text-2xl">
+                                {/* MAKE THE FONT SIZE SCALABLE RESPONSIVE WEB DESIGN!!! */}
+                                <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2500ms] text-xl">
                                     Systems Design Engineering @ UWaterloo
                                 </p>
                             </div>
@@ -47,6 +52,7 @@ function App() {
                             className="text-center animate-fade-right animate-duration-[2000ms] animate-ease-out animate-delay-[1000ms]"
                             src="assets\self-photos\profile-pic.png"
                             width={400}
+                            alt="profile-pic"
                         />
                     </div>
 
@@ -54,24 +60,26 @@ function App() {
                     {/* small footer containing socials and link to resume (view matthew ao for reference) */}
                     {/* linkedIn, Instagram, Github, Resume */}
                     <div className="flex items-center">
-                        <SocialIcon url="https://github.com/prestonty" target="_blank" bgColor="transparent" fgColor="white" />
-                        <SocialIcon url="https://linkedin.com/in/prestonty" target="_blank" bgColor="transparent" fgColor="white" />
-                        <a className="font-black text-lg ml-3" href="https://drive.google.com/file/d/1VreSeqKpQftLUILROUmt9HUJr0Q2tXay/view?usp=sharing" target="_blank">Resume</a>
-                        {/* <SocialIcon label="resume"  url="https://drive.google.com/file/d/1VreSeqKpQftLUILROUmt9HUJr0Q2tXay/view?usp=sharing" target="_blank" bgColor="transparent" fgColor="white" /> */}
+                        <SocialIcon url="https://github.com/prestonty" target="_blank" rel="noreferrer" bgColor="transparent" fgColor="white" />
+                        <SocialIcon url="https://linkedin.com/in/prestonty" target="_blank" rel="noreferrer" bgColor="transparent" fgColor="white" />
+                        <a className="font-black text-lg ml-3" href="https://drive.google.com/file/d/1VreSeqKpQftLUILROUmt9HUJr0Q2tXay/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
                     </div>
+                    <div className="flex justify-center">
                     <img
-                        className="ml-[570px] mt-20 animate-bounce animate-infinite animate-duration-[2000ms] animate-ease-in-out"
+                        className="mt-20 animate-bounce animate-infinite animate-duration-[2000ms] animate-ease-in-out"
                         src="assets\scrollDownWhite.png"
+                        alt="scroll-down-icon"
                     />
+                    </div>
                 </div>
                 {/* HOME END ------------------------------------------------------- */}
 
                 {/* FUN CORNER START ------------------------------------------------------- */}
-                <div id="#fun" className="m-auto px-[50px] w-[1440px] h-[600px]">
+                <div id="#fun" className="m-auto w-auto h-[600px]">
                     <h3 className="text-4xl font-light text-center mb-16">
                         Code Jam Corner
                     </h3>
-                    <div className="flex">
+                    <div className="flex justify-center">
                         {/* <img className="absolute mt-[100px] mr-[150px]" src="assets/purpleDots.png" /> */}
                         <Playlist />
                         <div className="w-[600px] h-[485px]">
@@ -87,7 +95,7 @@ function App() {
                 {/* PROJECTS START ------------------------------------------------------- */}
                 <div
                     id="#projects"
-                    className="mx-[15rem] px-[100px] mt-[180px] w-[1440px] h-[860px] mb-32"
+                    className="mx-[15rem] px-[100px] mt-[180px] w-auto h-[860px] mb-32"
                 >
                     <h2 className="font-semibold text-6xl" id="#projects">
                         Projects
@@ -109,9 +117,8 @@ function App() {
                 </div>
                 {/* PROJECTS END ------------------------------------------------------- */}
 
-                {/* I AM REMOVING THIS SECTION FOR NOW CAUSE IT PISSES ME OFF */}
                 {/* EXPERIENCE START ------------------------------------------------------- */}
-                {/* <div id="#experience" className="items-center mx-[15rem] px-[100px] border-2 w-[1440px] h-[860px] mb-32">
+                {/* <div id="#experience" className="items-center mx-[15rem] px-[100px] border-2 w-auto h-[860px] mb-32">
                     <h2 className="font-semibold text-6xl" id="#experience">
                         Experience
                     </h2> */}
@@ -119,7 +126,7 @@ function App() {
                 {/* make components containing elements to projects */}
                 {/* name of project, picture of project, brief description, technologies used (in expanded section) */}
                 {/* I SHOULD PUT THE LOGOS OF ALL THE COMPANIES I WORKED FOR ON THE WEBSITE, KINDA LIKE SPONSORS BUT NOT REALLY?? idk if this a good idea */}
-                {/* HACKATHONS MIGHT ACTUALLY BE WORTHY */}
+                {/* HACKATHONS MIGHT ACTUALLY BE WORTHY, PUT UNIVERSITY LOGOS*/}
                 {/* </div> */}
                 {/* EXPERIENCE END ------------------------------------------------------- */}
 
@@ -127,16 +134,39 @@ function App() {
                 <div
                     id="#travels"
                     // h-[860px] for some reason i made the height here fixed, I removed this for now
-                    className="items-center mx-[15rem] px-[100px] border-2 w-[1440px] mb-32"
+                    className="items-center mx-[15rem] px-[100px] border-2 w-auto mb-32"
                 >
-                    <h2 className="font-semibold text-6xl" id="#travels">
-                        Travels
+                    <h2 className="font-semibold text-6xl my-10" id="#travels">
+                        Welcome to {destination}
                     </h2>
-                    <p>Welcome to [Hong Kong]</p>
                     <div className="w-[500px] h-[450px] border-2">
                         <Earth />
                     </div>
-                    <Japan/>
+
+                    {/* Country/Place List */}
+
+                    {/* im thinking we got the overwatch announcer voice saying "Welcome to... Los Angeles" */}
+                    {/* then each destination has a photo of the city life at night/day*/}
+                    {/* upgrade the country logos cause the words arent big enough and the images arent big */}
+                    <div className="flex items-center justify-center">
+                        <button onClick={() => setDestination("Japan")}>
+                            <img src="/assets/self-photos/Flags/JapanIcon.png" alt="Destination" width={200}/>
+                        </button>
+                        <button onClick={() => setDestination("Hong Kong")}>
+                            <img src="/assets/self-photos/Flags/HongKongIcon.png" alt="Destination" width={200}/>
+                        </button>
+                        <button onClick={() => setDestination("Los Angeles")}>
+                            <img src="/assets/self-photos/Flags/LAIcon.png" alt="Destination" width={200}/>
+                        </button>
+                        <button onClick={() => setDestination("Las Vegas")}>
+                            <img src="/assets/self-photos/Flags/LasVegasIcon.png" alt="Destination" width={200}v/>
+                        </button>
+                        <button onClick={() => setDestination("New York City")}>
+                            <img src="/assets/self-photos/Flags/NYCIcon.png" alt="Destination" width={200}/>
+                        </button>
+
+                    </div>
+                    {/* <Japan/> */}
 
                     {/* make a globe that you can interact with with dots with all the countries you visited */}
                 </div>

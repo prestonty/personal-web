@@ -1,6 +1,7 @@
 export default function Japan() {
     return (
         <div className="">
+            {/* these images aint loading in vscode, so its an image problem, reupload it or something idk */}
             <img src="/assets/self-photos/Japan/testImage.png" alt="japan memories" width={400} />
             <img src="/assets/self-photos/Japan/akiba.png" alt="japan memories" width={400} />
             <img src="/assets/self-photos/Japan/akibaMaid.png" alt="japan memories" width={400} />

@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState, useEffect } from "react";
 
 // import Navbutton from "./components/Navbar";
 // import Header from "./components/Header";
@@ -15,67 +15,118 @@ import Earth from "./components/Earth";
 import Japan from "./countryPages/Japan";
 
 function App() {
-    // let role = "Software Developer";
+    const roles = ["Software Developer", "Designer", "Martial Artist", "Gamer", "Traveler"]
+    const [roleCounter, setRoleCounter] = useState(0);
+    const [role, setRole] = useState(roles[roleCounter]);
+    const [roleAnimation, setRoleAnimation] = useState('');
 
     const [destination, setDestination] = useState("Japan");
+    const [destinationAnimation, setDestinationAnimation] = useState('');
+
+
+    // For making destination animation play after each switch 
+    useEffect(() => {
+      // Update the class to trigger animation restart
+      setDestinationAnimation('animate-fade-right');
+  
+      // Optional: Delay the removal of the animation class to let it play
+      const timeoutId = setTimeout(() => {
+        setDestinationAnimation('');
+      }, 400); // Adjust the timeout based on your animation duration
+  
+      // Cleanup the timeout to avoid memory leaks
+      return () => clearTimeout(timeoutId);
+    }, [destination]);
+
+    // Hook to change the roles automatically every few seconds
+    // useEffect(() => {
+    //     setRoleAnimation('animate-fade-up')
+    //     const timeoutId = setTimeout(() => {
+    //         setRoleAnimation('');
+    //     }, 3000);
+
+    //     const intervalId = setInterval(() => {
+    //         // iterate index
+    //         setRoleCounter(roleCounter + 1);
+    //         if(roleCounter >= roles.length - 1) {
+    //             setRoleCounter(0);
+    //         }
+    //         // Set the role
+    //         setRole(roles[roleCounter]);
+    //       }, 4000);
+      
+    //       // Clean up the interval when the component is unmounted or dependencies change
+    //       return () => {clearInterval(intervalId); clearTimeout(timeoutId)};
+          
+    // })
+
+    // Role changing animations
+    // useEffect(() => {
+    //     setRoleAnimation('animate-fade-up')
+    //     const timeoutId = setTimeout(() => {
+    //         setRoleAnimation('');
+    //     }, 400);
+
+    //     return () => clearTimeout(timeoutId);
+    // })
 
     return (
         <div className="App">
             <div className="bg-black text-white font-regular font-work-sans">
-                {/* Header */}
-                <Navbar />
-
                 {/* HOME START ------------------------------------------------------- */}
-                <div
-                    id="#home"
-                    className="mx-[15rem] px-[100px] w-auto h-[790px]"
+                <section
+                    id="home"
                 >
-                    {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
-                    <div className="flex h-[420px] mt-[6rem] items-center justify-center">
-                        {/* mr-36 mb-[25rem]*/}
-                        <div className="mr-36">
-                            <h1 className="animate-fade-up animate-duration-[1000ms] animate-ease-out animate-delay-[1500ms] text-7xl font-semibold">
-                                Preston Tom-Ying
-                            </h1>
+                    <Navbar />
+                    <div className="mx-[15rem] px-[100px] w-auto h-[790px]">
+                        {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
+                        <div className="flex h-[420px] mt-[6rem] items-center justify-center">
+                            {/* mr-36 mb-[25rem]*/}
+                            <div className="mr-36">
+                                <h1 className="animate-fade-up animate-duration-[1000ms] animate-ease-out animate-delay-[1500ms] text-7xl font-semibold">
+                                    Preston Tom-Ying
+                                </h1>
 
-                            <div className="mt-16">
-                                <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2000ms] text-xl">
-                                    Hi, I am a Software Developer
-                                </p>
-                                {/* MAKE THE FONT SIZE SCALABLE RESPONSIVE WEB DESIGN!!! */}
-                                <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2500ms] text-xl">
-                                    Systems Design Engineering @ UWaterloo
-                                </p>
+                                <div className="mt-16">
+                                    <div className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2000ms] text-xl">
+                                        <p className="inline-block">Hi, I am a&nbsp;</p>
+                                        <p className={`inline-block ${roleAnimation} animate-duration-[400ms] animate-ease-out`}>{role}</p>
+                                    </div>
+                                    {/* MAKE THE FONT SIZE SCALABLE RESPONSIVE WEB DESIGN!!! */}
+                                    <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2500ms] text-xl">
+                                        Systems Design Engineering @ UWaterloo
+                                    </p>
+                                </div>
                             </div>
+                            <img
+                                className="text-center animate-fade-right animate-duration-[2000ms] animate-ease-out animate-delay-[1000ms]"
+                                src="assets\self-photos\profile-pic.png"
+                                width={400}
+                                alt="profile-pic"
+                            />
                         </div>
+
+
+                        {/* small footer containing socials and link to resume (view matthew ao for reference) */}
+                        {/* linkedIn, Instagram, Github, Resume */}
+                        <div className="flex items-center">
+                            <SocialIcon url="https://github.com/prestonty" target="_blank" rel="noreferrer" bgColor="transparent" fgColor="white" />
+                            <SocialIcon url="https://linkedin.com/in/prestonty" target="_blank" rel="noreferrer" bgColor="transparent" fgColor="white" />
+                            <a className="font-black text-lg ml-3" href="https://drive.google.com/file/d/1VreSeqKpQftLUILROUmt9HUJr0Q2tXay/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
+                        </div>
+                        <div className="flex justify-center">
                         <img
-                            className="text-center animate-fade-right animate-duration-[2000ms] animate-ease-out animate-delay-[1000ms]"
-                            src="assets\self-photos\profile-pic.png"
-                            width={400}
-                            alt="profile-pic"
+                            className="mt-20 animate-bounce animate-infinite animate-duration-[2000ms] animate-ease-in-out"
+                            src="assets\scrollDownWhite.png"
+                            alt="scroll-down-icon"
                         />
+                        </div>
                     </div>
-
-
-                    {/* small footer containing socials and link to resume (view matthew ao for reference) */}
-                    {/* linkedIn, Instagram, Github, Resume */}
-                    <div className="flex items-center">
-                        <SocialIcon url="https://github.com/prestonty" target="_blank" rel="noreferrer" bgColor="transparent" fgColor="white" />
-                        <SocialIcon url="https://linkedin.com/in/prestonty" target="_blank" rel="noreferrer" bgColor="transparent" fgColor="white" />
-                        <a className="font-black text-lg ml-3" href="https://drive.google.com/file/d/1VreSeqKpQftLUILROUmt9HUJr0Q2tXay/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
-                    </div>
-                    <div className="flex justify-center">
-                    <img
-                        className="mt-20 animate-bounce animate-infinite animate-duration-[2000ms] animate-ease-in-out"
-                        src="assets\scrollDownWhite.png"
-                        alt="scroll-down-icon"
-                    />
-                    </div>
-                </div>
+                </section>
                 {/* HOME END ------------------------------------------------------- */}
 
                 {/* FUN CORNER START ------------------------------------------------------- */}
-                <div id="#fun" className="m-auto w-auto h-[600px]">
+                <section id="fun" className="m-auto w-auto h-[600px]">
                     <h3 className="text-4xl font-light text-center mb-16">
                         Code Jam Corner
                     </h3>
@@ -89,12 +140,12 @@ function App() {
                             <Laptop />
                         </div>
                     </div>
-                </div>
+                </section>
                 {/* FUN CORNER END ------------------------------------------------------- */}
 
                 {/* PROJECTS START ------------------------------------------------------- */}
-                <div
-                    id="#projects"
+                <section
+                    id="projects"
                     className="mx-[15rem] px-[100px] mt-[180px] w-auto h-[860px] mb-32"
                 >
                     <h2 className="font-semibold text-6xl" id="#projects">
@@ -114,11 +165,11 @@ function App() {
                             link={"https://devpost.com/software/bliss-wtaofu?"}
                         />
                     </div>
-                </div>
+                </section>
                 {/* PROJECTS END ------------------------------------------------------- */}
 
                 {/* EXPERIENCE START ------------------------------------------------------- */}
-                {/* <div id="#experience" className="items-center mx-[15rem] px-[100px] border-2 w-auto h-[860px] mb-32">
+                {/* <section id="experience" className="items-center mx-[15rem] px-[100px] border-2 w-auto h-[860px] mb-32">
                     <h2 className="font-semibold text-6xl" id="#experience">
                         Experience
                     </h2> */}
@@ -127,16 +178,16 @@ function App() {
                 {/* name of project, picture of project, brief description, technologies used (in expanded section) */}
                 {/* I SHOULD PUT THE LOGOS OF ALL THE COMPANIES I WORKED FOR ON THE WEBSITE, KINDA LIKE SPONSORS BUT NOT REALLY?? idk if this a good idea */}
                 {/* HACKATHONS MIGHT ACTUALLY BE WORTHY, PUT UNIVERSITY LOGOS*/}
-                {/* </div> */}
+                {/* </section> */}
                 {/* EXPERIENCE END ------------------------------------------------------- */}
 
                 {/* TRAVELS START ------------------------------------------------------- */}
-                <div
-                    id="#travels"
+                <section
+                    id="travels"
                     // h-[860px] for some reason i made the height here fixed, I removed this for now
                     className="items-center mx-[15rem] px-[100px] border-2 w-auto mb-32"
                 >
-                    <h2 className="font-semibold text-6xl my-10" id="#travels">
+                    <h2 className={`font-semibold text-6xl my-10 ${destinationAnimation} animate-duration-[400ms] animate-ease-out`} id="#travels">
                         Welcome to {destination}
                     </h2>
                     <div className="w-[500px] h-[450px] border-2">
@@ -169,7 +220,7 @@ function App() {
                     {/* <Japan/> */}
 
                     {/* make a globe that you can interact with with dots with all the countries you visited */}
-                </div>
+                </section>
                 {/* TRAVELS END ------------------------------------------------------- */}
                 <Footer />
             </div>

@@ -4,13 +4,18 @@ import { useState, useEffect } from 'react';
 export default function Navbar(props) {
     // Optional tailwind (add this when u call this element: bg-cloudBurst, text-[white], )
     const [isSticky, setIsSticky] = useState(true); // sticks to the top of the webpage
+    const [sticky, setSticky] = useState("sticky top-0"); // sticks to the top of the webpage
     const [prevScrollPos, setPrevScrollPos] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
-            if(prevScrollPos > currentScrollPos || currentScrollPos < 100) {
-                setIsSticky(true);
+            if(prevScrollPos > currentScrollPos) {
+                setSticky("sticky top-0");
+                setIsSticky(true)
+            } else {
+                setSticky("top-0");
+                setIsSticky(false)
             }
             setPrevScrollPos(currentScrollPos);
         }
@@ -21,10 +26,10 @@ export default function Navbar(props) {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [prevScrollPos]);
 
     return (
-        <div class={`bg-nightBlack h-32 ${isSticky ? 'top-0' : '-top-16'} shadow transition-all duration-300`}>
+        <div class={`bg-nightBlack h-32 ${sticky} shadow-lg z-20 transform transition-transform duration-500`}>
             <ul class="text-white font-semibold font-work-sans text-4xl flex justify-evenly items-center">
                 <li class="mt-4">
                     <Link activeClass="active" smooth spy to="home">
@@ -39,9 +44,9 @@ export default function Navbar(props) {
                 <li class="">
                     <Link activeClass="active" smooth spy to="projects">Projects</Link>
                 </li>
-                <li class="">
+                {/* <li class="">
                     <Link activeClass="active" smooth spy to="Experience">Experience</Link>
-                </li>
+                </li> */}
                 <li class="">
                     <Link activeClass="active" smooth spy to="travels">Travels</Link>
                 </li>

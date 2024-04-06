@@ -20,7 +20,7 @@ function App() {
     const [role, setRole] = useState(roles[roleCounter]);
     const [roleAnimation, setRoleAnimation] = useState('');
 
-    const [destination, setDestination] = useState("Japan");
+    const [destination, setDestination] = useState("日本");
     const [destinationAnimation, setDestinationAnimation] = useState('');
 
 
@@ -38,7 +38,7 @@ function App() {
       return () => clearTimeout(timeoutId);
     }, [destination]);
 
-    // Hook to change the roles automatically every few seconds
+    // // Hook to change the roles automatically every few seconds
     // useEffect(() => {
     //     setRoleAnimation('animate-fade-up')
     //     const timeoutId = setTimeout(() => {
@@ -60,7 +60,7 @@ function App() {
           
     // })
 
-    // Role changing animations
+    // // Role changing animations
     // useEffect(() => {
     //     setRoleAnimation('animate-fade-up')
     //     const timeoutId = setTimeout(() => {
@@ -73,11 +73,11 @@ function App() {
     return (
         <div className="App">
             <div className="bg-black text-white font-regular font-work-sans">
+                <Navbar />
                 {/* HOME START ------------------------------------------------------- */}
                 <section
                     id="home"
                 >
-                    <Navbar />
                     <div className="mx-[15rem] px-[100px] w-auto h-[790px]">
                         {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
                         <div className="flex h-[420px] mt-[6rem] items-center justify-center">
@@ -200,10 +200,10 @@ function App() {
                     {/* then each destination has a photo of the city life at night/day*/}
                     {/* upgrade the country logos cause the words arent big enough and the images arent big */}
                     <div className="flex items-center justify-center">
-                        <button onClick={() => setDestination("Japan")}>
+                        <button onClick={() => setDestination("日本")}>
                             <img src="/assets/self-photos/Flags/JapanIcon.png" alt="Destination" width={200}/>
                         </button>
-                        <button onClick={() => setDestination("Hong Kong")}>
+                        <button onClick={() => setDestination("香港")}>
                             <img src="/assets/self-photos/Flags/HongKongIcon.png" alt="Destination" width={200}/>
                         </button>
                         <button onClick={() => setDestination("Los Angeles")}>

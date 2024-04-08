@@ -31,9 +31,9 @@ function App() {
         "Las Vegas",
         "New York City",
         "日本", // I need to make a separate collage for 2024 Japan trip
-        "香港",
-        "Korea",
-        "Taiwan",
+        // "香港", // remove for now because I lost the photos
+        // "Korea",
+        // "Taiwan",
         "England",
         "France",
         "Italy",
@@ -133,6 +133,7 @@ function App() {
                         {/* linkedIn, Instagram, Github, Resume */}
                         <div className="flex items-center">
                             <SocialIcon
+                                className="hover:bg-blue duration-300"
                                 url="https://github.com/prestonty"
                                 target="_blank"
                                 rel="noreferrer"
@@ -140,6 +141,7 @@ function App() {
                                 fgColor="white"
                             />
                             <SocialIcon
+                                className="hover:bg-blue duration-300"
                                 url="https://linkedin.com/in/prestonty"
                                 target="_blank"
                                 rel="noreferrer"
@@ -147,7 +149,7 @@ function App() {
                                 fgColor="white"
                             />
                             <a
-                                className="font-black text-lg ml-3"
+                                className="font-black text-lg ml-3 hover:text-blue duration-300"
                                 href="https://drive.google.com/file/d/1VreSeqKpQftLUILROUmt9HUJr0Q2tXay/view?usp=sharing"
                                 target="_blank"
                                 rel="noreferrer"
@@ -253,6 +255,7 @@ function App() {
                     <div className="flex items-center justify-center mt-10">
                         {destinations.map((dest, index) => (
                             <button
+                                className="border-2 text-black hover:text-white duration-200"
                                 key={index}
                                 onClick={() => setDestination(dest)}
                             >

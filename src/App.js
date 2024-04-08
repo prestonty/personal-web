@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // import Navbutton from "./components/Navbar";
 // import Header from "./components/Header";
-import { SocialIcon } from 'react-social-icons'
+import { SocialIcon } from "react-social-icons";
 import Footer from "./components/Footer";
 
 import Navbar from "./components/Navbar";
@@ -12,30 +12,49 @@ import Project from "./components/Project";
 // import Document from "./components/Document";
 import Earth from "./components/Earth";
 
-import Japan from "./countryPages/Japan";
+// import Japan from "./countryPages/Japan";
 
 function App() {
-    const roles = ["Software Developer", "Designer", "Martial Artist", "Gamer", "Traveler"]
+    // Home ----------------------------------------------------------------------------------
+    const roles = [
+        "Software Developer",
+        "Designer",
+        "Martial Artist",
+        "Gamer",
+        "Traveler",
+    ];
     const [roleCounter, setRoleCounter] = useState(0);
     const [role, setRole] = useState(roles[roleCounter]);
-    const [roleAnimation, setRoleAnimation] = useState('');
+    const [roleAnimation, setRoleAnimation] = useState("");
 
+    // Travelling ----------------------------------------------------------------------------------
+    const destinations = [
+        "Los Angeles",
+        "Las Vegas",
+        "New York",
+        "Japan",
+        "Hong Kong",
+        "Korea",
+        "Taiwan",
+        "London",
+        "Paris",
+        "Venice",
+    ];
     const [destination, setDestination] = useState("日本");
-    const [destinationAnimation, setDestinationAnimation] = useState('');
+    const [destinationAnimation, setDestinationAnimation] = useState("");
 
-
-    // For making destination animation play after each switch 
+    // For making destination animation play after each switch
     useEffect(() => {
-      // Update the class to trigger animation restart
-      setDestinationAnimation('animate-fade-right');
-  
-      // Optional: Delay the removal of the animation class to let it play
-      const timeoutId = setTimeout(() => {
-        setDestinationAnimation('');
-      }, 400); // Adjust the timeout based on your animation duration
-  
-      // Cleanup the timeout to avoid memory leaks
-      return () => clearTimeout(timeoutId);
+        // Update the class to trigger animation restart
+        setDestinationAnimation("animate-fade-right");
+
+        // Optional: Delay the removal of the animation class to let it play
+        const timeoutId = setTimeout(() => {
+            setDestinationAnimation("");
+        }, 400); // Adjust the timeout based on your animation duration
+
+        // Cleanup the timeout to avoid memory leaks
+        return () => clearTimeout(timeoutId);
     }, [destination]);
 
     // // Hook to change the roles automatically every few seconds
@@ -54,10 +73,10 @@ function App() {
     //         // Set the role
     //         setRole(roles[roleCounter]);
     //       }, 4000);
-      
+
     //       // Clean up the interval when the component is unmounted or dependencies change
     //       return () => {clearInterval(intervalId); clearTimeout(timeoutId)};
-          
+
     // })
 
     // // Role changing animations
@@ -75,9 +94,7 @@ function App() {
             <div className="bg-black text-white font-regular font-work-sans">
                 <Navbar />
                 {/* HOME START ------------------------------------------------------- */}
-                <section
-                    id="home"
-                >
+                <section id="home">
                     <div className="mx-[15rem] px-[100px] w-auto h-[790px]">
                         {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
                         <div className="flex h-[420px] mt-[6rem] items-center justify-center">
@@ -89,8 +106,14 @@ function App() {
 
                                 <div className="mt-16">
                                     <div className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2000ms] text-xl">
-                                        <p className="inline-block">Hi, I am a&nbsp;</p>
-                                        <p className={`inline-block ${roleAnimation} animate-duration-[400ms] animate-ease-out`}>{role}</p>
+                                        <p className="inline-block">
+                                            Hi, I am a&nbsp;
+                                        </p>
+                                        <p
+                                            className={`inline-block ${roleAnimation} animate-duration-[400ms] animate-ease-out`}
+                                        >
+                                            {role}
+                                        </p>
                                     </div>
                                     {/* MAKE THE FONT SIZE SCALABLE RESPONSIVE WEB DESIGN!!! */}
                                     <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2500ms] text-xl">
@@ -106,20 +129,38 @@ function App() {
                             />
                         </div>
 
-
                         {/* small footer containing socials and link to resume (view matthew ao for reference) */}
                         {/* linkedIn, Instagram, Github, Resume */}
                         <div className="flex items-center">
-                            <SocialIcon url="https://github.com/prestonty" target="_blank" rel="noreferrer" bgColor="transparent" fgColor="white" />
-                            <SocialIcon url="https://linkedin.com/in/prestonty" target="_blank" rel="noreferrer" bgColor="transparent" fgColor="white" />
-                            <a className="font-black text-lg ml-3" href="https://drive.google.com/file/d/1VreSeqKpQftLUILROUmt9HUJr0Q2tXay/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
+                            <SocialIcon
+                                url="https://github.com/prestonty"
+                                target="_blank"
+                                rel="noreferrer"
+                                bgColor="transparent"
+                                fgColor="white"
+                            />
+                            <SocialIcon
+                                url="https://linkedin.com/in/prestonty"
+                                target="_blank"
+                                rel="noreferrer"
+                                bgColor="transparent"
+                                fgColor="white"
+                            />
+                            <a
+                                className="font-black text-lg ml-3"
+                                href="https://drive.google.com/file/d/1VreSeqKpQftLUILROUmt9HUJr0Q2tXay/view?usp=sharing"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Resume
+                            </a>
                         </div>
                         <div className="flex justify-center">
-                        <img
-                            className="mt-20 animate-bounce animate-infinite animate-duration-[2000ms] animate-ease-in-out"
-                            src="assets\scrollDownWhite.png"
-                            alt="scroll-down-icon"
-                        />
+                            <img
+                                className="mt-20 animate-bounce animate-infinite animate-duration-[2000ms] animate-ease-in-out"
+                                src="assets\scrollDownWhite.png"
+                                alt="scroll-down-icon"
+                            />
                         </div>
                     </div>
                 </section>
@@ -187,37 +228,72 @@ function App() {
                     // h-[860px] for some reason i made the height here fixed, I removed this for now
                     className="items-center mx-[15rem] px-[100px] border-2 w-auto mb-32"
                 >
-                    <h2 className={`font-semibold text-6xl my-10 ${destinationAnimation} animate-duration-[400ms] animate-ease-out`} id="#travels">
+                    <h2
+                        className={`font-semibold text-6xl my-10 ${destinationAnimation} animate-duration-[400ms] animate-ease-out`}
+                        id="#travels"
+                    >
                         Welcome to {destination}
                     </h2>
-                    <div className="w-[500px] h-[450px] border-2">
-                        <Earth />
+                    <div className="flex items-center">
+                        <div className="w-[500px] h-[450px] border-2">
+                            <Earth />
+                        </div>
+
+                        {/* I want this beside the globe */}
+                        {/* THE FILE NAMES MATTER, IT REMOVES SPACES FROM THE DESTINATION NAME AND EXPECTS THE FILE NAME TO FOLLOW THE SAME NAMING FORMAT */}
+                        <img
+                            src={`/assets/self-photos/Travel_Collage/${destination.replace(
+                                " ",
+                                ""
+                            )}.png`}
+                            alt="Destination"
+                            width={800}
+                            // MAKE THIS RESPONSIVE LATER
+                        />
                     </div>
 
                     {/* Country/Place List */}
-
                     {/* im thinking we got the overwatch announcer voice saying "Welcome to... Los Angeles" */}
                     {/* then each destination has a photo of the city life at night/day*/}
                     {/* upgrade the country logos cause the words arent big enough and the images arent big */}
                     <div className="flex items-center justify-center">
                         <button onClick={() => setDestination("日本")}>
-                            <img src="/assets/self-photos/Flags/JapanIcon.png" alt="Destination" width={200}/>
+                            <img
+                                src="/assets/self-photos/Flags/JapanIcon.png"
+                                alt="Destination"
+                                width={200}
+                            />
                         </button>
                         <button onClick={() => setDestination("香港")}>
-                            <img src="/assets/self-photos/Flags/HongKongIcon.png" alt="Destination" width={200}/>
+                            <img
+                                src="/assets/self-photos/Flags/HongKongIcon.png"
+                                alt="Destination"
+                                width={200}
+                            />
                         </button>
                         <button onClick={() => setDestination("Los Angeles")}>
-                            <img src="/assets/self-photos/Flags/LAIcon.png" alt="Destination" width={200}/>
+                            <img
+                                src="/assets/self-photos/Flags/LAIcon.png"
+                                alt="Destination"
+                                width={200}
+                            />
                         </button>
                         <button onClick={() => setDestination("Las Vegas")}>
-                            <img src="/assets/self-photos/Flags/LasVegasIcon.png" alt="Destination" width={200}v/>
+                            <img
+                                src="/assets/self-photos/Flags/LasVegasIcon.png"
+                                alt="Destination"
+                                width={200}
+                                v
+                            />
                         </button>
                         <button onClick={() => setDestination("New York City")}>
-                            <img src="/assets/self-photos/Flags/NYCIcon.png" alt="Destination" width={200}/>
+                            <img
+                                src="/assets/self-photos/Flags/NYCIcon.png"
+                                alt="Destination"
+                                width={200}
+                            />
                         </button>
-
                     </div>
-                    {/* <Japan/> */}
 
                     {/* make a globe that you can interact with with dots with all the countries you visited */}
                 </section>

@@ -12,8 +12,6 @@ import Project from "./components/Project";
 // import Document from "./components/Document";
 import Earth from "./components/Earth";
 
-// import Japan from "./countryPages/Japan";
-
 function App() {
     // Home ----------------------------------------------------------------------------------
     const roles = [
@@ -32,7 +30,7 @@ function App() {
         "Los Angeles",
         "Las Vegas",
         "New York City",
-        "日本",
+        "日本", // I need to make a separate collage for 2024 Japan trip
         "香港",
         "Korea",
         "Taiwan",
@@ -92,9 +90,11 @@ function App() {
     return (
         <div className="App">
             <div className="bg-black text-white font-regular font-work-sans">
+                <div id="home"></div>
+                {/* Trick the navbar into navigating here when clicking on logo */}
                 <Navbar />
                 {/* HOME START ------------------------------------------------------- */}
-                <section id="home">
+                <section>
                     <div className="mx-[15rem] px-[100px] w-auto h-[790px]">
                         {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
                         <div className="flex h-[420px] mt-[6rem] items-center justify-center">
@@ -165,7 +165,6 @@ function App() {
                     </div>
                 </section>
                 {/* HOME END ------------------------------------------------------- */}
-
                 {/* FUN CORNER START ------------------------------------------------------- */}
                 <section id="fun" className="m-auto w-auto h-[600px]">
                     <h3 className="text-4xl font-light text-center mb-16">
@@ -183,7 +182,6 @@ function App() {
                     </div>
                 </section>
                 {/* FUN CORNER END ------------------------------------------------------- */}
-
                 {/* PROJECTS START ------------------------------------------------------- */}
                 <section
                     id="projects"
@@ -208,7 +206,6 @@ function App() {
                     </div>
                 </section>
                 {/* PROJECTS END ------------------------------------------------------- */}
-
                 {/* EXPERIENCE START ------------------------------------------------------- */}
                 {/* <section id="experience" className="items-center mx-[15rem] px-[100px] border-2 w-auto h-[860px] mb-32">
                     <h2 className="font-semibold text-6xl" id="#experience">
@@ -221,7 +218,6 @@ function App() {
                 {/* HACKATHONS MIGHT ACTUALLY BE WORTHY, PUT UNIVERSITY LOGOS*/}
                 {/* </section> */}
                 {/* EXPERIENCE END ------------------------------------------------------- */}
-
                 {/* TRAVELS START ------------------------------------------------------- */}
                 <section
                     id="travels"
@@ -229,7 +225,7 @@ function App() {
                     className="items-center mx-[15rem] px-[100px] w-auto mb-32"
                 >
                     <h2
-                        className={`font-semibold text-6xl my-10 ${destinationAnimation} animate-duration-[400ms] animate-ease-out`}
+                        className={`font-semibold text-6xl mt-10 mb-12 ${destinationAnimation} animate-duration-[400ms] animate-ease-out`}
                         id="#travels"
                     >
                         Welcome to {destination}
@@ -242,7 +238,7 @@ function App() {
                         {/* Travel Collage Photo Display */}
                         <img
                             className="p-5"
-                            src={`/assets/self-photos/Travel_Collage/${destination.replaceAll(
+                            src={`/assets/self-photos/travel-collage/${destination.replaceAll(
                                 " ",
                                 ""
                             )}.png`}
@@ -254,14 +250,14 @@ function App() {
 
                     {/* Country/Place List */}
                     {/* im thinking we got the overwatch announcer voice saying "Welcome to... Los Angeles" */}
-                    <div className="flex items-center justify-center">
+                    <div className="flex items-center justify-center mt-10">
                         {destinations.map((dest, index) => (
                             <button
                                 key={index}
                                 onClick={() => setDestination(dest)}
                             >
                                 <img
-                                    src={`/assets/self-photos/Flags/${dest.replaceAll(
+                                    src={`/assets/destination-icons/${dest.replaceAll(
                                         " ",
                                         ""
                                     )}Icon.png`}

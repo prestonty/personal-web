@@ -31,16 +31,16 @@ function App() {
     const destinations = [
         "Los Angeles",
         "Las Vegas",
-        "New York",
-        "Japan",
-        "Hong Kong",
+        "New York City",
+        "日本",
+        "香港",
         "Korea",
         "Taiwan",
-        "London",
-        "Paris",
-        "Venice",
+        "England",
+        "France",
+        "Italy",
     ];
-    const [destination, setDestination] = useState("日本");
+    const [destination, setDestination] = useState("Los Angeles"); // Japan
     const [destinationAnimation, setDestinationAnimation] = useState("");
 
     // For making destination animation play after each switch
@@ -123,7 +123,7 @@ function App() {
                             </div>
                             <img
                                 className="text-center animate-fade-right animate-duration-[2000ms] animate-ease-out animate-delay-[1000ms]"
-                                src="assets\self-photos\profile-pic.png"
+                                src="assets\self-photos\CircleProfile.png"
                                 width={400}
                                 alt="profile-pic"
                             />
@@ -226,7 +226,7 @@ function App() {
                 <section
                     id="travels"
                     // h-[860px] for some reason i made the height here fixed, I removed this for now
-                    className="items-center mx-[15rem] px-[100px] border-2 w-auto mb-32"
+                    className="items-center mx-[15rem] px-[100px] w-auto mb-32"
                 >
                     <h2
                         className={`font-semibold text-6xl my-10 ${destinationAnimation} animate-duration-[400ms] animate-ease-out`}
@@ -235,14 +235,14 @@ function App() {
                         Welcome to {destination}
                     </h2>
                     <div className="flex items-center">
-                        <div className="w-[500px] h-[450px] border-2">
+                        <div className="w-[500px] h-[450px]">
                             <Earth />
                         </div>
 
-                        {/* I want this beside the globe */}
-                        {/* THE FILE NAMES MATTER, IT REMOVES SPACES FROM THE DESTINATION NAME AND EXPECTS THE FILE NAME TO FOLLOW THE SAME NAMING FORMAT */}
+                        {/* Travel Collage Photo Display */}
                         <img
-                            src={`/assets/self-photos/Travel_Collage/${destination.replace(
+                            className="p-5"
+                            src={`/assets/self-photos/Travel_Collage/${destination.replaceAll(
                                 " ",
                                 ""
                             )}.png`}
@@ -254,48 +254,26 @@ function App() {
 
                     {/* Country/Place List */}
                     {/* im thinking we got the overwatch announcer voice saying "Welcome to... Los Angeles" */}
-                    {/* then each destination has a photo of the city life at night/day*/}
-                    {/* upgrade the country logos cause the words arent big enough and the images arent big */}
                     <div className="flex items-center justify-center">
-                        <button onClick={() => setDestination("日本")}>
-                            <img
-                                src="/assets/self-photos/Flags/JapanIcon.png"
-                                alt="Destination"
-                                width={200}
-                            />
-                        </button>
-                        <button onClick={() => setDestination("香港")}>
-                            <img
-                                src="/assets/self-photos/Flags/HongKongIcon.png"
-                                alt="Destination"
-                                width={200}
-                            />
-                        </button>
-                        <button onClick={() => setDestination("Los Angeles")}>
-                            <img
-                                src="/assets/self-photos/Flags/LAIcon.png"
-                                alt="Destination"
-                                width={200}
-                            />
-                        </button>
-                        <button onClick={() => setDestination("Las Vegas")}>
-                            <img
-                                src="/assets/self-photos/Flags/LasVegasIcon.png"
-                                alt="Destination"
-                                width={200}
-                                v
-                            />
-                        </button>
-                        <button onClick={() => setDestination("New York City")}>
-                            <img
-                                src="/assets/self-photos/Flags/NYCIcon.png"
-                                alt="Destination"
-                                width={200}
-                            />
-                        </button>
+                        {destinations.map((dest, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setDestination(dest)}
+                            >
+                                <img
+                                    src={`/assets/self-photos/Flags/${dest.replaceAll(
+                                        " ",
+                                        ""
+                                    )}Icon.png`}
+                                    alt="Destination"
+                                    width={200}
+                                />
+                                {console.log(dest.replaceAll(" ", ""))}
+                            </button>
+                        ))}
                     </div>
 
-                    {/* make a globe that you can interact with with dots with all the countries you visited */}
+                    {/* make a globe that you can interact with with dots with all the countries you visited (Too hard for now) */}
                 </section>
                 {/* TRAVELS END ------------------------------------------------------- */}
                 <Footer />

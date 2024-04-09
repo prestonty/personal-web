@@ -1,7 +1,17 @@
-// nav buttons use <div> and <a> instead of <button>
+// React Spring for animations
+// import { animated, useSpring } from "@react-spring/web";
+// import { useState, useEffect } from "react";
+// TODO
+{
+    /* I NEED TO PLAT THE ANIMATION WHEN IT COMES INTO SCROLL VIEW, NOT WHEN U REFRESH WEBSITE!!! */
+}
+{
+    /* add icon to learn more (short description of tech stack expand down) */
+}
+
 export default function Project(props) {
-    // Optional tailwind (add this when u call this element: bg-cloudBurst, text-[white], )
     return (
+        // <animated.div style={animateProps}>
         <div class="font-work-sans m-10">
             <a
                 class="inline-block"
@@ -9,8 +19,6 @@ export default function Project(props) {
                 target="_blank"
                 rel="noreferrer"
             >
-                {/* I NEED TO PLAT THE ANIMATION WHEN IT COMES INTO SCROLL VIEW, NOT WHEN U REFRESH WEBSITE!!! */}
-
                 <img
                     class="border-4 hover:text-blue duration-500"
                     // old animation: animate-fade-up animate-once animate-duration-[2200ms] animate-delay-500 animate-ease-out
@@ -29,8 +37,7 @@ export default function Project(props) {
                     {props.title}
                 </p>
             </a>
-
-            {/* icon to learn more */}
         </div>
+        // </animated.div>
     );
 }

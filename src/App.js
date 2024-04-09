@@ -16,7 +16,7 @@ function App() {
     // Home ----------------------------------------------------------------------------------
     const roles = [
         "Software Developer",
-        "Designer",
+        "Designer", // press X to doubt
         "Martial Artist",
         "Gamer",
         "Traveler",
@@ -100,12 +100,12 @@ function App() {
                         <div className="flex h-[420px] mt-[6rem] items-center justify-center">
                             {/* mr-36 mb-[25rem]*/}
                             <div className="mr-36">
-                                <h1 className="animate-fade-up animate-duration-[1000ms] animate-ease-out animate-delay-[1500ms] text-7xl font-semibold">
+                                <h1 className="animate-fade-up animate-duration-[1000ms] animate-ease-out animate-delay-[2000ms] text-7xl font-semibold">
                                     Preston Tom-Ying
                                 </h1>
 
                                 <div className="mt-16">
-                                    <div className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2000ms] text-xl">
+                                    <div className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2500ms] text-xl">
                                         <p className="inline-block">
                                             Hi, I am a&nbsp;
                                         </p>
@@ -116,47 +116,47 @@ function App() {
                                         </p>
                                     </div>
                                     {/* MAKE THE FONT SIZE SCALABLE RESPONSIVE WEB DESIGN!!! */}
-                                    <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2500ms] text-xl">
+                                    <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[3000ms] text-xl">
                                         Systems Design Engineering @ UWaterloo
                                     </p>
                                 </div>
+                                {/* small footer containing socials and link to resume (view matthew ao for reference) */}
+                                {/* linkedIn, Instagram, Github, Resume */}
+                                <div className="mt-28 flex items-center animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[3500ms]">
+                                    <SocialIcon
+                                        className="hover:bg-blue duration-300"
+                                        url="https://github.com/prestonty"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        bgColor="transparent"
+                                        fgColor="white"
+                                    />
+                                    <SocialIcon
+                                        className="hover:bg-blue duration-300"
+                                        url="https://linkedin.com/in/prestonty"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        bgColor="transparent"
+                                        fgColor="white"
+                                    />
+                                    <a
+                                        className="font-black text-2xl ml-3 hover:text-blue duration-300"
+                                        href="https://drive.google.com/file/d/1VreSeqKpQftLUILROUmt9HUJr0Q2tXay/view?usp=sharing"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        Resume
+                                    </a>
+                                </div>
                             </div>
                             <img
-                                className="text-center animate-fade-right animate-duration-[2000ms] animate-ease-out animate-delay-[1000ms]"
+                                className="text-center animate-fade-right animate-duration-[2000ms] animate-ease-out animate-delay-[3500ms]"
                                 src="assets\self-photos\CircleProfile.png"
                                 width={400}
                                 alt="profile-pic"
                             />
                         </div>
 
-                        {/* small footer containing socials and link to resume (view matthew ao for reference) */}
-                        {/* linkedIn, Instagram, Github, Resume */}
-                        <div className="flex items-center">
-                            <SocialIcon
-                                className="hover:bg-blue duration-300"
-                                url="https://github.com/prestonty"
-                                target="_blank"
-                                rel="noreferrer"
-                                bgColor="transparent"
-                                fgColor="white"
-                            />
-                            <SocialIcon
-                                className="hover:bg-blue duration-300"
-                                url="https://linkedin.com/in/prestonty"
-                                target="_blank"
-                                rel="noreferrer"
-                                bgColor="transparent"
-                                fgColor="white"
-                            />
-                            <a
-                                className="font-black text-2xl ml-3 hover:text-blue duration-300"
-                                href="https://drive.google.com/file/d/1VreSeqKpQftLUILROUmt9HUJr0Q2tXay/view?usp=sharing"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Resume
-                            </a>
-                        </div>
                         <div className="flex justify-center">
                             <img
                                 className="mt-20 animate-bounce animate-infinite animate-duration-[2000ms] animate-ease-in-out"

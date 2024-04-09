@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 // import Navbutton from "./components/Navbar";
 // import Header from "./components/Header";
 import { SocialIcon } from "react-social-icons";
-import Footer from "./components/Footer";
+import Footer from "./components/footer";
 
 import Navbar from "./components/Navbar";
 import Laptop from "./components/Laptop";

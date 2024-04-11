@@ -2,6 +2,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
+// I NEVER USE THIS FILE
+
 // nav buttons use <div> and <a> instead of <button>
 export default function Header() {
     // Optional tailwind (add this when u call this element: bg-cloudBurst, text-[white], )

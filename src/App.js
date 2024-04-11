@@ -185,7 +185,8 @@ function App() {
                 <section
                     id="travels"
                     // h-[860px] for some reason i made the height here fixed, I removed this for now
-                    className="items-center mx-[15rem] px-[100px] border-2 w-auto mb-32"
+                    // items-center mx-[15rem] px-[100px]
+                    className="m-auto w-auto border-2 mb-32"
                 >
                     <h2 className={`font-semibold text-6xl my-10 ${destinationAnimation} animate-duration-[400ms] animate-ease-out`} id="#travels">
                         Welcome to {destination}

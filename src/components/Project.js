@@ -26,14 +26,16 @@ export default function Project(props) {
                     alt="project"
                 />
             </a>
-            <p class="text-silver text-xl mt-4 mb-2">{props.category}</p>
+            <p class="text-silver mt-4 mb-2 xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+                {props.category}
+            </p>
             <a
                 class="inline"
                 href={props.link}
                 target="_blank"
                 rel="noreferrer"
             >
-                <p class="inline text-white text-3xl hover:text-blue duration-500">
+                <p class="inline text-white xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl hover:text-blue duration-500">
                     {props.title}
                 </p>
             </a>

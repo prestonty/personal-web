@@ -39,14 +39,15 @@ export default function Navbar(props) {
         <div
             className={`bg-nightBlack h-32 ${sticky} shadow-lg z-20 transform transition-transform duration-500`}
         >
-            <ul className="text-white font-semibold font-work-sans text-4xl flex justify-evenly items-center">
+            <ul className="text-white font-semibold font-work-sans sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl flex justify-evenly items-center">
                 <li className="mt-4">
                     <Link activeClass="active" smooth spy to="home">
                         <img
                             className="hover:bg-blue duration-500 cursor-pointer"
                             src="assets\logos\white-logo.png"
-                            width={172}
-                            height={89}
+                            width={"60%"}
+                            maxWidth={172}
+                            // height={89}
                             alt="logo"
                         />
                     </Link>

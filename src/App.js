@@ -95,17 +95,17 @@ function App() {
                 <Navbar />
                 {/* HOME START ------------------------------------------------------- */}
                 <section>
-                    <div className="mx-[15rem] px-[100px] w-auto h-[790px]">
+                    <div className="mx-[15rem] w-auto h-[790px]">
                         {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
                         <div className="flex h-[420px] mt-[6rem] items-center justify-center">
                             {/* mr-36 mb-[25rem]*/}
-                            <div className="mr-36">
-                                <h1 className="animate-fade-up animate-duration-[1000ms] animate-ease-out animate-delay-[2000ms] text-7xl font-semibold">
+                            <div className="xs:mr-8 sm:mr-8 md:mr-10 lg:mr-20 xl:mr-36">
+                                <h1 className="animate-fade-up animate-duration-[1000ms] animate-ease-out animate-delay-[2000ms] sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold">
                                     Preston Tom-Ying
                                 </h1>
 
-                                <div className="mt-16">
-                                    <div className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2500ms] text-xl">
+                                <div className="sm:mt-4 md:mt-8 lg:mt-12 xl:mt-16">
+                                    <div className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2500ms] xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl">
                                         <p className="inline-block">
                                             Hi, I am a&nbsp;
                                         </p>
@@ -116,7 +116,7 @@ function App() {
                                         </p>
                                     </div>
                                     {/* MAKE THE FONT SIZE SCALABLE RESPONSIVE WEB DESIGN!!! */}
-                                    <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[3000ms] text-xl">
+                                    <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[3000ms] xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl">
                                         Systems Design Engineering @ UWaterloo
                                     </p>
                                 </div>
@@ -175,11 +175,12 @@ function App() {
                     <div className="flex justify-center">
                         {/* <img className="absolute mt-[100px] mr-[150px]" src="assets/purpleDots.png" /> */}
                         <Playlist />
-                        <div className="w-[600px] h-[485px]">
-                            <p className="absolute ml-40 text-silver">
+                        {/* w-[600px] h-[485px] */}
+                        <div className="w-auto h-auto~">
+                            {/* <p className="absolute ml-40 text-silver">
                                 Try clicking on the laptop and pressing WASD!
-                            </p>
-                            <Laptop />
+                            </p> */}
+                            {/* <Laptop /> */}
                         </div>
                     </div>
                 </section>
@@ -187,9 +188,12 @@ function App() {
                 {/* PROJECTS START ------------------------------------------------------- */}
                 <section
                     id="projects"
-                    className="mx-[15rem] px-[100px] mt-[180px] w-auto h-[860px] mb-32"
+                    className="xs:mx-4 sm:mx-4 md:mx-12 lg:mx-20 xl:mx-24 2xl:mx-28 mt-[180px] w-auto h-[860px] mb-32"
                 >
-                    <h2 className="font-semibold text-6xl" id="#projects">
+                    <h2
+                        className="text-center font-semibold text-6xl"
+                        id="#projects"
+                    >
                         Projects
                     </h2>
                     <div className="flex items-center justify-center mt-8">
@@ -209,7 +213,7 @@ function App() {
                 </section>
                 {/* PROJECTS END ------------------------------------------------------- */}
                 {/* EXPERIENCE START ------------------------------------------------------- */}
-                {/* <section id="experience" className="items-center mx-[15rem] px-[100px] border-2 w-auto h-[860px] mb-32">
+                {/* <section id="experience" className="items-center mx-[15rem] border-2 w-auto h-[860px] mb-32">
                     <h2 className="font-semibold text-6xl" id="#experience">
                         Experience
                     </h2> */}
@@ -224,7 +228,8 @@ function App() {
                 <section
                     id="travels"
                     // h-[860px] for some reason i made the height here fixed, I removed this for now
-                    className="items-center mx-[15rem] px-[100px] w-auto mb-32"
+                    // mx-[15rem]
+                    className="items-center w-auto mb-32"
                 >
                     <h2
                         className={`font-semibold text-6xl mt-10 mb-12 ${destinationAnimation} animate-duration-[400ms] animate-ease-out`}
@@ -233,9 +238,9 @@ function App() {
                         Welcome to {destination}
                     </h2>
                     <div className="flex items-center">
-                        <div className="w-[500px] h-[450px]">
+                        {/* <div className="w-[500px] h-[450px]">
                             <Earth />
-                        </div>
+                        </div> */}
 
                         {/* Travel Collage Photo Display */}
                         <img

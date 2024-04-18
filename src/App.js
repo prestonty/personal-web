@@ -95,7 +95,7 @@ function App() {
                 <Navbar />
                 {/* HOME START ------------------------------------------------------- */}
                 <section>
-                    <div className="mx-[15rem] w-auto h-[790px]">
+                    <div className="mx-[4rem] w-auto h-[790px]">
                         {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
                         <div className="flex h-[420px] mt-[6rem] items-center justify-center">
                             {/* mr-36 mb-[25rem]*/}
@@ -152,7 +152,9 @@ function App() {
                             <img
                                 className="text-center animate-fade-right animate-duration-[2000ms] animate-ease-out animate-delay-[3500ms]"
                                 src="assets\self-photos\CircleProfile.png"
-                                width={400}
+                                // width={400}
+                                max-width="60%"
+                                height="auto"
                                 alt="profile-pic"
                             />
                         </div>
@@ -176,11 +178,11 @@ function App() {
                         {/* <img className="absolute mt-[100px] mr-[150px]" src="assets/purpleDots.png" /> */}
                         <Playlist />
                         {/* w-[600px] h-[485px] */}
-                        <div className="w-auto h-auto~">
-                            {/* <p className="absolute ml-40 text-silver">
+                        <div className="w-[600px] h-[485px]">
+                            <p className="absolute ml-40 text-silver">
                                 Try clicking on the laptop and pressing WASD!
-                            </p> */}
-                            {/* <Laptop /> */}
+                            </p>
+                            <Laptop />
                         </div>
                     </div>
                 </section>

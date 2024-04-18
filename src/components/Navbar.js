@@ -42,14 +42,16 @@ export default function Navbar(props) {
             <ul className="text-white font-semibold font-work-sans sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl flex justify-evenly items-center">
                 <li className="mt-4">
                     <Link activeClass="active" smooth spy to="home">
-                        <img
-                            className="hover:bg-blue duration-500 cursor-pointer"
-                            src="assets\logos\white-logo.png"
-                            width={"60%"}
-                            maxWidth={172}
-                            // height={89}
-                            alt="logo"
-                        />
+                        {/* Logo will not exceed 172px size (DO NOT CHANGE THIS VALUE, IT IS OPTIMAL SIZE FOR IMAGE QUALITY); didnt do anything */}
+                        <div className="w-[172px]">
+                            <img
+                                className="hover:bg-blue duration-500 cursor-pointer"
+                                src="assets\logos\white-logo.png"
+                                max-width="100%"
+                                height="auto"
+                                alt="logo"
+                            />
+                        </div>
                     </Link>
                 </li>
                 <li className="">

@@ -232,7 +232,6 @@ function App() {
                 {/* TRAVELS START ------------------------------------------------------- */}
                 <section
                     id="travels"
-                    // h-[860px] for some reason i made the height here fixed, I removed this for now
                     // mx-[15rem]
                     // items-center w-auto mb-32 border-2
                     className="flex flex-col items-center justify-center mx-auto mb-32"

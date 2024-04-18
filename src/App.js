@@ -100,12 +100,12 @@ function App() {
                         <div className="flex h-[420px] mt-[6rem] items-center justify-center">
                             {/* mr-36 mb-[25rem]*/}
                             <div className="xs:mr-8 sm:mr-8 md:mr-10 lg:mr-20 xl:mr-36">
-                                <h1 className="animate-fade-up animate-duration-[1000ms] animate-ease-out animate-delay-[2000ms] sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold">
+                                <h1 className="animate-fade-up animate-duration-[1000ms] animate-ease-out animate-delay-[2000ms] 2xs:text-xl sm:text-2xl md:text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold">
                                     Preston Tom-Ying
                                 </h1>
 
                                 <div className="sm:mt-4 md:mt-8 lg:mt-12 xl:mt-16">
-                                    <div className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2500ms] xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                                    <div className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[2500ms] 2xs:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-lg xl:text-xl">
                                         <p className="inline-block">
                                             Hi, I am a&nbsp;
                                         </p>
@@ -116,7 +116,7 @@ function App() {
                                         </p>
                                     </div>
                                     {/* MAKE THE FONT SIZE SCALABLE RESPONSIVE WEB DESIGN!!! */}
-                                    <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[3000ms] xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                                    <p className="animate-fade-up animate-duration-[800ms] animate-ease-out animate-delay-[3000ms] 2xs:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-lg xl:text-xl">
                                         Systems Design Engineering @ UWaterloo
                                     </p>
                                 </div>
@@ -149,14 +149,17 @@ function App() {
                                     </a>
                                 </div>
                             </div>
-                            <img
-                                className="text-center animate-fade-right animate-duration-[2000ms] animate-ease-out animate-delay-[3500ms]"
-                                src="assets\self-photos\CircleProfile.png"
-                                // width={400}
-                                max-width="60%"
-                                height="auto"
-                                alt="profile-pic"
-                            />
+                            {/* Simple div to contain the image for resizing. Image will never exceed 400px and will resize based on screen size*/}
+                            <div className="w-[400px]">
+                                <img
+                                    className="text-center animate-fade-right animate-duration-[2000ms] animate-ease-out animate-delay-[3500ms]"
+                                    src="assets\self-photos\CircleProfile.png"
+                                    // width={400}
+                                    max-width="100%"
+                                    height="auto"
+                                    alt="profile-pic"
+                                />
+                            </div>
                         </div>
 
                         <div className="flex justify-center">
@@ -179,8 +182,8 @@ function App() {
                         <Playlist />
                         {/* w-[600px] h-[485px] */}
                         <div className="w-[600px] h-[485px]">
-                            <p className="absolute ml-40 text-silver">
-                                Try clicking on the laptop and pressing WASD!
+                            <p className="absolute ml-4 text-silver">
+                                Click on the laptop and pressing WASD!
                             </p>
                             <Laptop />
                         </div>
@@ -190,7 +193,7 @@ function App() {
                 {/* PROJECTS START ------------------------------------------------------- */}
                 <section
                     id="projects"
-                    className="xs:mx-4 sm:mx-4 md:mx-12 lg:mx-20 xl:mx-24 2xl:mx-28 mt-[180px] w-auto h-[860px] mb-32"
+                    className="2xs:mx-4 xs:mx-4 sm:mx-4 md:mx-12 lg:mx-20 xl:mx-24 2xl:mx-28 mt-[180px] w-auto h-[860px] mb-32"
                 >
                     <h2
                         className="text-center font-semibold text-6xl"
@@ -231,18 +234,19 @@ function App() {
                     id="travels"
                     // h-[860px] for some reason i made the height here fixed, I removed this for now
                     // mx-[15rem]
-                    className="items-center w-auto mb-32"
+                    // items-center w-auto mb-32 border-2
+                    className="flex flex-col items-center justify-center mx-auto mb-32"
                 >
                     <h2
-                        className={`font-semibold text-6xl mt-10 mb-12 ${destinationAnimation} animate-duration-[400ms] animate-ease-out`}
+                        className={`font-semibold my-12 ${destinationAnimation} animate-duration-[400ms] animate-ease-out 2xs:text-2xl xs:text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl 2xl:text-6xl`}
                         id="#travels"
                     >
                         Welcome to {destination}
                     </h2>
                     <div className="flex items-center">
-                        {/* <div className="w-[500px] h-[450px]">
+                        <div className="w-[500px] h-[450px] md:hidden xl:block">
                             <Earth />
-                        </div> */}
+                        </div>
 
                         {/* Travel Collage Photo Display */}
                         <img

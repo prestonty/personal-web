@@ -181,7 +181,7 @@ function App() {
                         {/* <img className="absolute mt-[100px] mr-[150px]" src="assets/purpleDots.png" /> */}
                         <Playlist />
                         {/* w-[600px] h-[485px] */}
-                        <div className="w-[600px] h-[485px]">
+                        <div className="w-[600px] h-[485px] 2xs:hidden xs:hidden sm:hidden md:block lg:block xl:block 2xl:block">
                             <p className="absolute ml-4 text-silver">
                                 Click on the laptop and pressing WASD!
                             </p>

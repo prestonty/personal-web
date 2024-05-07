@@ -171,6 +171,40 @@ function App() {
                         </div>
                     </div>
                 </section>
+                <section id="about" className="m-auto w-auto h-[600px]">
+                    <h3 className="text-4xl font-light text-center mb-16">
+                        About Me
+                    </h3>
+                    <div className="text-center  2xs:px-2 xs:px-10 sm:px-20 md:px-40 lg:px-60 xl:px-100">
+                        <p className="2xs:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-lg xl:text-xl font-normal">
+                            It started off as fun trips to visit friends from
+                            other universities but slowly evolved into a strange
+                            obsession. It has become my goal to visit all the
+                            major universities in Canada through their
+                            hackathons before I graduate. So far I have been to:
+                        </p>
+                        <ul className="list-outside 2xs:text-xs xs:text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-normal mt-4">
+                            <li>DeltaHacks 9 (McMaster University)</li>
+                            <li>
+                                MetHacks 2023 (Toronto Metropolitan University)
+                            </li>
+                            <li>Hack the North 10 (Waterloo University)</li>
+                            <li>
+                                Hack the Valley 8 (University of Toronto
+                                Scarborough)
+                            </li>
+                            <li>Hack Western 10 (Western University)</li>
+                            <li>DeltaHacks 10 (McMaster University)</li>
+                            <li>UofTHacks 11 (Univeristy of Toronto)</li>
+                        </ul>
+                        <p className="2xs:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-lg xl:text-xl font-normal mt-12">
+                            My current career interests include full stack
+                            development and machine learning. In my free time, I
+                            go bouldering, run long distances, and rummage for
+                            vintage video games.
+                        </p>
+                    </div>
+                </section>
                 {/* HOME END ------------------------------------------------------- */}
                 {/* FUN CORNER START ------------------------------------------------------- */}
                 <section id="fun" className="m-auto w-auto h-[600px]">
@@ -262,7 +296,7 @@ function App() {
 
                     {/* Country/Place List */}
                     {/* im thinking we got the overwatch announcer voice saying "Welcome to... Los Angeles" */}
-                    <div className="flex items-center justify-center mt-10">
+                    <div className="flex items-center justify-center mt-10 mx-4">
                         {destinations.map((dest, index) => (
                             <button
                                 className="border-2 text-black hover:text-white duration-200"

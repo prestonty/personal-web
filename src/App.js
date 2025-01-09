@@ -217,7 +217,7 @@ function App() {
                         {/* w-[600px] h-[485px] */}
                         <div className="w-[600px] h-[485px] 2xs:hidden xs:hidden sm:hidden md:block lg:block xl:block 2xl:block">
                             <p className="absolute ml-4 text-silver">
-                                Click on the laptop and pressing WASD!
+                                Click on the laptop and press WASD!
                             </p>
                             <Laptop />
                         </div>

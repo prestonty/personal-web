@@ -42,6 +42,7 @@ function App() {
     const [destinationAnimation, setDestinationAnimation] = useState("");
 
     const hackathons = [
+        { name: "YRHacks", school: "York Region" },
         { name: "DeltaHacks 9", school: "McMaster University" },
         { name: "MetHacks 2023", school: "Toronto Metropolitan University" },
         { name: "Hack the North 10", school: "University of Waterloo" },
@@ -50,23 +51,8 @@ function App() {
         { name: "UofTHacks 11", school: "University of Toronto" },
         { name: "Hack the Valley 9 (Organizer)", school: "U of T Scarborough" },
         { name: "DeltaHacks X", school: "McMaster University" },
+        { name: "UofTHacks 12", school: "University of Toronto" },
         { name: "Hack the 6ix", school: "York University" },
-    ];
-
-    const extracurriculars = [
-        {
-            title: "Martial Arts",
-            blurb: "Taekwondo black belt; love drills & sparring.",
-        },
-        { title: "Running", blurb: "Long-distance routes, steady base miles." },
-        {
-            title: "Badminton",
-            blurb: "Casual games; quick footwork, good rallies.",
-        },
-        {
-            title: "Retro Games",
-            blurb: "Hunting for vintage cartridges & consoles.",
-        },
     ];
 
     // For making destination animation play after each switch
@@ -181,7 +167,7 @@ function App() {
                             <div className="w-[400px]">
                                 <img
                                     className="text-center animate-fade-right animate-duration-[2000ms] animate-ease-out animate-delay-[3500ms]"
-                                    src="assets\self-photos\CircleProfile.png"
+                                    src="assets\self-photos\CircleProfile.webp"
                                     // width={400}
                                     max-width="100%"
                                     height="auto"
@@ -277,7 +263,7 @@ function App() {
                 {/* PROJECTS START ------------------------------------------------------- */}
                 <section
                     id="projects"
-                    className="2xs:mx-4 xs:mx-4 sm:mx-4 md:mx-12 lg:mx-20 xl:mx-24 2xl:mx-28 mt-[180px] w-auto h-[860px] mb-32"
+                    className="2xs:mx-4 xs:mx-4 sm:mx-4 md:mx-12 lg:mx-20 xl:mx-24 2xl:mx-28 mt-[180px] w-auto mb-32"
                 >
                     <h2
                         className="text-center font-semibold text-6xl"
@@ -285,18 +271,48 @@ function App() {
                     >
                         Projects
                     </h2>
-                    <div className="flex items-center justify-center mt-8">
+                    <div className="flex flex-col items-center justify-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-8 max-w-7xl mx-auto">
                         <Project
-                            src="assets\project-photos\pokeGuesser.png"
+                            src="assets\project-photos\investoryx.webp"
+                            title={"InvestoryX"}
+                            category={"Web Development"}
+                            link={"https://www.investoryx.ca/"}
+                            height={220}
+                            star={true}
+                        />
+                        {/* <Project
+                            src="assets\project-photos\pokeGuesser.webp"
                             title={"PokeGuesser"}
                             category={"Web Development"}
                             link={"https://poke-guesser-pink.vercel.app/"}
+                        /> */}
+                        <Project
+                            src="assets\project-photos\trailmixer.webp"
+                            title={"TrailMixer"}
+                            category={"AI Powered Video Editor"}
+                            link={"https://devpost.com/software/trailmixer"}
+                            height={220}
                         />
                         <Project
-                            src="assets\project-photos\bliss.png"
+                            src="assets\project-photos\linguistify.webp"
+                            title={"Linguistify"}
+                            category={"Video Dubbing"}
+                            link={"https://github.com/prestonty/Linguistify"}
+                            height={220}
+                        />
+                        <Project
+                            src="assets\project-photos\bliss.webp"
                             title={"bliss"}
                             category={"Web Development"}
                             link={"https://devpost.com/software/bliss-wtaofu?"}
+                            height={410}
+                        />
+                        <Project
+                            src="assets\project-photos\ai-girlfriend.webp"
+                            title={"AI Girlfriend"}
+                            category={"(Gatekeeping)"}
+                            link={"https://github.com/prestonty/AI-GIRLFRIEND"}
+                            height={410}
                         />
                     </div>
                 </section>

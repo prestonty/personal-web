@@ -326,30 +326,29 @@ function App() {
                     >
                         Welcome to {destination}
                     </h2>
-                    <div className="flex items-center">
-                        <div className="w-[500px] h-[450px] md:hidden xl:block">
+                    <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8">
+                        <div className="w-[500px] h-[450px] hidden lg:block">
                             <Earth />
                         </div>
 
                         {/* Travel Collage Photo Display */}
                         <img
-                            className="p-5"
+                            className="w-full max-w-[800px] h-auto object-contain px-4"
                             src={`/assets/self-photos/travel-collage/${destination.replaceAll(
                                 " ",
                                 ""
-                            )}.png`}
+                            )}.webp`}
                             alt="Destination"
-                            width={800}
                             // MAKE THIS RESPONSIVE LATER
                         />
                     </div>
 
                     {/* Country/Place List */}
                     {/* im thinking we got the overwatch announcer voice saying "Welcome to... Los Angeles" */}
-                    <div className="flex items-center justify-center mt-10 mx-4">
+                    <div className="flex flex-wrap items-center justify-center mt-10 mx-4 gap-2 lg:gap-x-2">
                         {destinations.map((dest, index) => (
                             <button
-                                className="border-2 text-black hover:text-white duration-200"
+                                className="border-2 border-gray-300 text-black hover:text-white hover:border-blue-400 hover:shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg overflow-hidden"
                                 key={index}
                                 onClick={() => setDestination(dest)}
                             >
@@ -359,7 +358,7 @@ function App() {
                                         ""
                                     )}Icon.png`}
                                     alt="Destination"
-                                    width={200}
+                                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-[200px] lg:h-auto hover:brightness-110 transition-all duration-300"
                                 />
                                 {console.log(dest.replaceAll(" ", ""))}
                             </button>

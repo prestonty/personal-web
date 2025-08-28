@@ -1,45 +1,47 @@
-// React Spring for animations
-// import { animated, useSpring } from "@react-spring/web";
-// import { useState, useEffect } from "react";
-// TODO
-{
-    /* I NEED TO PLAT THE ANIMATION WHEN IT COMES INTO SCROLL VIEW, NOT WHEN U REFRESH WEBSITE!!! */
-}
-{
-    /* add icon to learn more (short description of tech stack expand down) */
-}
+import { motion } from "framer-motion";
 
 export default function Project(props) {
     return (
-        // <animated.div style={animateProps}>
-        <div class="font-work-sans m-10">
+        <motion.div
+            className="font-work-sans"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+        >
             <a
-                class="inline-block"
+                className="inline-block"
                 href={props.link}
                 target="_blank"
                 rel="noreferrer"
             >
                 <img
-                    class="border-4 hover:text-blue duration-500"
-                    // old animation: animate-fade-up animate-once animate-duration-[2200ms] animate-delay-500 animate-ease-out
+                    className="border-4 hover:text-blue duration-500 w-full object-cover"
+                    style={{ height: props.height || "300px" }}
                     src={props.src}
                     alt="project"
                 />
             </a>
-            <p class="text-silver mt-4 mb-2 xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl">
-                {props.category}
-            </p>
+            <div className="flex items-center gap-2 mt-4 mb-2">
+                <p className="text-silver xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+                    {props.category}
+                </p>
+                {props.star && (
+                    <span className="text-yellow-400 text-lg lg:text-xl xl:text-2xl">
+                        ⭐
+                    </span>
+                )}
+            </div>
             <a
-                class="inline"
+                className="inline"
                 href={props.link}
                 target="_blank"
                 rel="noreferrer"
             >
-                <p class="inline text-white xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl hover:text-blue duration-500">
+                <p className="inline text-white xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl hover:text-blue duration-500">
                     {props.title}
                 </p>
             </a>
-        </div>
-        // </animated.div>
+        </motion.div>
     );
 }

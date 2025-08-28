@@ -41,6 +41,34 @@ function App() {
     const [destination, setDestination] = useState("Los Angeles"); // Japan
     const [destinationAnimation, setDestinationAnimation] = useState("");
 
+    const hackathons = [
+        { name: "DeltaHacks 9", school: "McMaster University" },
+        { name: "MetHacks 2023", school: "Toronto Metropolitan University" },
+        { name: "Hack the North 10", school: "University of Waterloo" },
+        { name: "Hack the Valley 8", school: "U of T Scarborough" },
+        { name: "Hack Western 10", school: "Western University" },
+        { name: "UofTHacks 11", school: "University of Toronto" },
+        { name: "Hack the Valley 9 (Organizer)", school: "U of T Scarborough" },
+        { name: "DeltaHacks X", school: "McMaster University" },
+        { name: "Hack the 6ix", school: "York University" },
+    ];
+
+    const extracurriculars = [
+        {
+            title: "Martial Arts",
+            blurb: "Taekwondo black belt; love drills & sparring.",
+        },
+        { title: "Running", blurb: "Long-distance routes, steady base miles." },
+        {
+            title: "Badminton",
+            blurb: "Casual games; quick footwork, good rallies.",
+        },
+        {
+            title: "Retro Games",
+            blurb: "Hunting for vintage cartridges & consoles.",
+        },
+    ];
+
     // For making destination animation play after each switch
     useEffect(() => {
         // Update the class to trigger animation restart
@@ -95,7 +123,7 @@ function App() {
                 <Navbar />
                 {/* HOME START ------------------------------------------------------- */}
                 <section>
-                    <div className="mx-[4rem] w-auto h-[790px]">
+                    <div className="mx-[4rem] w-auto h-[700px]">
                         {/* home page (Who am I) (software engineer, web developer, martial artist, etc) */}
                         <div className="flex h-[420px] mt-[6rem] items-center justify-center">
                             {/* mr-36 mb-[25rem]*/}
@@ -171,43 +199,60 @@ function App() {
                         </div>
                     </div>
                 </section>
-                <section id="about" className="m-auto w-auto h-[600px]">
-                    <h3 className="text-4xl font-light text-center mb-16">
+                <section
+                    id="about"
+                    className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16"
+                >
+                    {/* Heading */}
+                    <h3 className="text-4xl font-light text-center mb-6">
                         About Me
                     </h3>
-                    <div className="text-center  2xs:px-2 xs:px-10 sm:px-20 md:px-40 lg:px-60 xl:px-100">
-                        <p className="2xs:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-lg xl:text-xl font-normal">
-                            It started off as fun trips to visit friends from
-                            other universities but slowly evolved into a strange
-                            obsession. It has become my goal to visit all the
-                            major universities in Canada through their
-                            hackathons before I graduate. So far I have been to:
-                        </p>
-                        <ul className="list-outside 2xs:text-xs xs:text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-normal mt-4">
-                            <li>DeltaHacks 9 (McMaster University)</li>
-                            <li>
-                                MetHacks 2023 (Toronto Metropolitan University)
-                            </li>
-                            <li>Hack the North 10 (Waterloo University)</li>
-                            <li>
-                                Hack the Valley 8 (University of Toronto
-                                Scarborough)
-                            </li>
-                            <li>Hack Western 10 (Western University)</li>
-                            {/* <li>DeltaHacks 10 (McMaster University)</li> */}
-                            <li>UofTHacks 11 (Univeristy of Toronto)</li>
-                        </ul>
-                        <p className="2xs:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-lg xl:text-xl font-normal mt-12">
-                            My current career interests include full stack
-                            development and machine learning. In my free time, I
-                            go bouldering, run long distances, and rummage for
-                            vintage video games.
-                        </p>
+
+                    {/* Intro paragraph */}
+                    <p className="mx-auto max-w-3xl text-center text-sm sm:text-base md:text-lg lg:text-xl font-normal text-balance">
+                        It started off as fun trips to visit friends from other
+                        universities, but it slowly evolved into a strange
+                        obsession. I’m aiming to visit all the major Canadian
+                        universities through their hackathons before I graduate.
+                        So far I’ve been to:
+                    </p>
+
+                    {/* Hackathons grid */}
+                    <div className="mt-10 grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-1/4">
+                        {hackathons.map((h) => (
+                            <div
+                                key={h.name}
+                                className="rounded-2xl border border-black/5 bg-white/70 dark:bg-white/5 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow p-5 md:p-6 lg:p-7"
+                            >
+                                <div className="flex items-start gap-3">
+                                    <span
+                                        aria-hidden
+                                        className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-current"
+                                    />
+                                    <div>
+                                        <h4 className="text-lg md:text-xl lg:text-2xl font-medium leading-tight">
+                                            {h.name}
+                                        </h4>
+                                        <p className="text-sm md:text-base opacity-70">
+                                            {h.school}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
+                    <p className="text-center 2xs:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-lg xl:text-xl font-normal mt-12">
+                        My current career interests focus on learning backend
+                        engineering, including scalable system design, database
+                        architecture, and machine learning infrastructure. In my
+                        free time, I practice martial arts, play casual
+                        badminton, run long distances, and rummage for vintage
+                        video games.
+                    </p>
                 </section>
                 {/* HOME END ------------------------------------------------------- */}
                 {/* FUN CORNER START ------------------------------------------------------- */}
-                <section id="fun" className="m-auto w-auto h-[600px]">
+                <section id="fun" className="mt-20 m-auto w-auto h-[600px]">
                     <h3 className="text-4xl font-light text-center mb-16">
                         Code Jam Corner
                     </h3>
@@ -215,11 +260,16 @@ function App() {
                         {/* <img className="absolute mt-[100px] mr-[150px]" src="assets/purpleDots.png" /> */}
                         <Playlist />
                         {/* w-[600px] h-[485px] */}
-                        <div className="w-[600px] h-[485px] 2xs:hidden xs:hidden sm:hidden md:block lg:block xl:block 2xl:block">
-                            <p className="absolute ml-4 text-silver">
+                        <div className="relative group w-[600px] h-[485px] hidden md:block">
+                            {/* Hover text */}
+                            <p className="pointer-events-none absolute top-2 left-4 z-10 text-silver opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 Click on the laptop and press WASD!
                             </p>
-                            <Laptop />
+
+                            {/* Ensure the laptop fills the hover area */}
+                            <div className="absolute inset-0">
+                                <Laptop />
+                            </div>
                         </div>
                     </div>
                 </section>

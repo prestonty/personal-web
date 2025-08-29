@@ -69,38 +69,6 @@ function App() {
         return () => clearTimeout(timeoutId);
     }, [destination]);
 
-    // // Hook to change the roles automatically every few seconds
-    // useEffect(() => {
-    //     setRoleAnimation('animate-fade-up')
-    //     const timeoutId = setTimeout(() => {
-    //         setRoleAnimation('');
-    //     }, 3000);
-
-    //     const intervalId = setInterval(() => {
-    //         // iterate index
-    //         setRoleCounter(roleCounter + 1);
-    //         if(roleCounter >= roles.length - 1) {
-    //             setRoleCounter(0);
-    //         }
-    //         // Set the role
-    //         setRole(roles[roleCounter]);
-    //       }, 4000);
-
-    //       // Clean up the interval when the component is unmounted or dependencies change
-    //       return () => {clearInterval(intervalId); clearTimeout(timeoutId)};
-
-    // })
-
-    // // Role changing animations
-    // useEffect(() => {
-    //     setRoleAnimation('animate-fade-up')
-    //     const timeoutId = setTimeout(() => {
-    //         setRoleAnimation('');
-    //     }, 400);
-
-    //     return () => clearTimeout(timeoutId);
-    // })
-
     return (
         <div className="App">
             <div className="bg-black text-white font-regular font-work-sans">
@@ -275,8 +243,9 @@ function App() {
                         <Project
                             src="assets\project-photos\investoryx.webp"
                             title={"InvestoryX"}
-                            category={"Web Development"}
+                            category={"Stock Analytics Platform"}
                             link={"https://www.investoryx.ca/"}
+                            github={"https://github.com/prestonty/InvestoryX"}
                             height={220}
                             star={true}
                         />
@@ -291,13 +260,17 @@ function App() {
                             title={"TrailMixer"}
                             category={"AI Powered Video Editor"}
                             link={"https://devpost.com/software/trailmixer"}
+                            github={
+                                "https://github.com/prestonty/Trailmixer-frontend"
+                            }
                             height={220}
                         />
                         <Project
                             src="assets\project-photos\linguistify.webp"
                             title={"Linguistify"}
-                            category={"Video Dubbing"}
+                            category={"Video Dubbing Software"}
                             link={"https://github.com/prestonty/Linguistify"}
+                            github={"https://github.com/prestonty/Linguistify"}
                             height={220}
                         />
                         <Project
@@ -305,13 +278,17 @@ function App() {
                             title={"bliss"}
                             category={"Web Development"}
                             link={"https://devpost.com/software/bliss-wtaofu?"}
+                            github={"https://github.com/prestonty/bliss"}
                             height={410}
                         />
                         <Project
                             src="assets\project-photos\ai-girlfriend.webp"
                             title={"AI Girlfriend"}
-                            category={"(Gatekeeping)"}
+                            category={""}
                             link={"https://github.com/prestonty/AI-GIRLFRIEND"}
+                            github={
+                                "https://github.com/prestonty/AI-GIRLFRIEND"
+                            }
                             height={410}
                         />
                     </div>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
 
 export default function Project(props) {
     return (
@@ -22,16 +23,28 @@ export default function Project(props) {
                     alt="project"
                 />
             </a>
-            <div className="flex items-center gap-2 mt-4 mb-2">
-                <p className="text-silver xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl">
-                    {props.category}
-                </p>
-                {props.star && (
-                    <span className="text-yellow-400 text-lg lg:text-xl xl:text-2xl">
-                        ⭐
-                    </span>
+
+            <div className="flex items-center justify-between gap-2 mt-4 mb-2">
+                <div className="flex items-center gap-x-2">
+                    <p className="text-silver xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl">
+                        {props.category}
+                    </p>
+                    {props.star && (
+                        <span className="text-yellow-400 text-lg lg:text-xl xl:text-2xl">
+                            ⭐
+                        </span>
+                    )}
+                </div>
+                {props.github && (
+                    <a href={props.github} target="_blank" rel="noreferrer">
+                        <FaGithub
+                            className="text-gray-400 text-xl lg:text-2xl xl:text-3xl 
+                   transform scale-90 transition-transform duration-300 hover:scale-100 will-change-transform"
+                        />
+                    </a>
                 )}
             </div>
+
             <a
                 className="inline"
                 href={props.link}

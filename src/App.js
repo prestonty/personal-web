@@ -269,7 +269,7 @@ function App() {
                             src="assets\project-photos\linguistify.webp"
                             title={"Linguistify"}
                             category={"Video Dubbing Software"}
-                            link={"https://github.com/prestonty/Linguistify"}
+                            link={"https://devpost.com/software/linguistify"}
                             github={"https://github.com/prestonty/Linguistify"}
                             height={220}
                         />

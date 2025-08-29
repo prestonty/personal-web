@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Preston's Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hey there! 👋 Welcome to my little corner of the internet. This is my hub world where I showcase some of my projects, share my adventures abroad, and random interests.
 
-## Available Scripts
+## 🛠️ Tech Stack (The Boring Stuff)
 
-In the project directory, you can run:
+-   **Frontend**: React 18+ Tailwind CSS (because who has time to write CSS from scratch?)
+-   **Animations**: Framer Motion + React Spring (making things go brrrr)
+-   **3D Stuff**: Three.js + React Three Fiber (was really fun to create and play with)
 
-### `npm start`
+## 🚀 Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-   Node.js
+-   npm
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Clone this bad boy
+git clone https://github.com/prestonty/personal-website.git
 
-### `npm run build`
+# Navigate to the project
+cd personal-website
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Install dependencies
+npm i
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Start the development server
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Your browser should open to `http://localhost:3000` and you'll see my beautiful face staring back at you! 👀
 
-### `npm run eject`
+## 🎮 Fun Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-   **Interactive Laptop**: Click on it and try typing WASD or QWERT
+-   **Travel Globe**: Click on different destinations to see my adventures
+-   **Responsive Design**: Works on everything from a potato phone to a gaming rig
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🏆 Projects That Actually Work
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   **InvestoryX** - Stock analytics platform (because money makes the world go round)
+-   **TrailMixer** - AI-powered video editor (I actually enjoy video editing sometimes but spend way too long...)
+-   **Linguistify** - Video dubbing software (breaking language barriers, one video at a time)
+-   **bliss** - Web development project (HackWestern!)
+-   **AI Girlfriend** - Don't ask, just check the GitHub 😂
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎯 What I'm Up To
 
-## Learn More
+Currently studying **Systems Design Engineering @ UWaterloo** and trying to figure out:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-   Backend engineering (scalable systems, databases, all that jazz)
+-   Machine learning infrastructure (because AI is the future, right?)
+-   How to not break production code (still working on this one)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🤝 Let's Connect
 
-### Code Splitting
+-   **GitHub**: [@prestonty](https://github.com/prestonty)
+-   **LinkedIn**: [prestonty](https://linkedin.com/in/prestonty)
+-   **Resume**: [Check it out](https://drive.google.com/file/d/1AApH9YLQK7FYy8OpPeUa9X4KUHUlYAyC/view)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📝 License
 
-### Analyzing the Bundle Size
+This project is private, but feel free to use it as inspiration for your own site. Just don't copy-paste everything and claim it's yours.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+**Built with ❤️, ☕, and probably some questionable design decisions**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_P.S. If you find any bugs, they're probably features I haven't documented yet._

@@ -4,16 +4,16 @@ Hey there! 👋 Welcome to my little corner of the internet. This is my hub worl
 
 ## 🛠️ Tech Stack (The Boring Stuff)
 
--   **Frontend**: React 18+ Tailwind CSS (because who has time to write CSS from scratch?)
--   **Animations**: Framer Motion + React Spring (making things go brrrr)
--   **3D Stuff**: Three.js + React Three Fiber (was really fun to create and play with)
+- **Frontend**: React 18+ Tailwind CSS (because who has time to write CSS from scratch?)
+- **Animations**: Framer Motion + React Spring (making things go brrrr)
+- **3D Stuff**: Three.js + React Three Fiber (was really fun to create and play with)
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
--   Node.js
--   npm
+- Node.js
+- npm
 
 ### Installation
 
@@ -35,31 +35,30 @@ Your browser should open to `http://localhost:3000` and you'll see my beautiful 
 
 ## 🎮 Fun Features
 
--   **Interactive Laptop**: Click on it and try typing WASD or QWERT
--   **Travel Globe**: Click on different destinations to see my adventures
--   **Responsive Design**: Works on everything from a potato phone to a gaming rig
+- **Interactive Laptop**: Click on it and try typing WASD or QWERT
+- **Travel Globe**: Click on different destinations to see my adventures
+- **Responsive Design**: Works on everything from a potato phone to a gaming rig
 
 ## 🏆 Projects That Actually Work
 
--   **InvestoryX** - Stock analytics platform (because money makes the world go round)
--   **TrailMixer** - AI-powered video editor (I actually enjoy video editing sometimes but spend way too long...)
--   **Linguistify** - Video dubbing software (breaking language barriers, one video at a time)
--   **bliss** - Web development project (HackWestern!)
--   **AI Girlfriend** - Don't ask, just check the GitHub 😂
+- **InvestoryX** - Stock analytics platform (because money makes the world go round)
+- **TrailMixer** - AI-powered video editor (I actually enjoy video editing sometimes but spend way too long...)
+- **Linguistify** - Video dubbing software (breaking language barriers, one video at a time)
+- **bliss** - Web development project (HackWestern!)
+- **AI Girlfriend** - Don't ask, just check the GitHub 😂
 
 ## 🎯 What I'm Up To
 
 Currently studying **Systems Design Engineering @ UWaterloo** and trying to figure out:
 
--   Backend engineering (scalable systems, databases, all that jazz)
--   Machine learning infrastructure (because AI is the future, right?)
--   How to not break production code (still working on this one)
+- Backend engineering (scalable systems, databases, all that jazz)
+- Machine learning infrastructure (because AI is the future, right?)
+- How to not break production code (still working on this one)
 
 ## 🤝 Let's Connect
 
--   **GitHub**: [@prestonty](https://github.com/prestonty)
--   **LinkedIn**: [prestonty](https://linkedin.com/in/prestonty)
--   **Resume**: [Check it out](https://drive.google.com/file/d/1AApH9YLQK7FYy8OpPeUa9X4KUHUlYAyC/view)
+- **GitHub**: [@prestonty](https://github.com/prestonty)
+- **LinkedIn**: [prestonty](https://linkedin.com/in/prestonty)
 
 ## 📝 License
 

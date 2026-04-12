@@ -62,9 +62,17 @@ export default function Navbar(props) {
                         Projects
                     </Link>
                 </li>
-                {/* <li className="">
-                    <Link activeClass="active" smooth spy to="Experience">Experience</Link>
-                </li> */}
+                <li className="">
+                    <Link
+                        className="hover:text-blue duration-300 cursor-pointer"
+                        activeClass="active"
+                        smooth
+                        spy
+                        to="experience"
+                    >
+                        Experience
+                    </Link>
+                </li>
                 <li className="">
                     <Link
                         className="hover:text-blue duration-300 cursor-pointer"

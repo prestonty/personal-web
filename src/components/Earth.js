@@ -1,4 +1,8 @@
-import Spline from "@splinetool/react-spline";
+'use client';
+
+import dynamic from 'next/dynamic';
+
+const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false });
 
 export default function Earth() {
     return (

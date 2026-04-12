@@ -1,10 +1,7 @@
+'use client';
+
 import {
     Link,
-    Button,
-    Element,
-    Events,
-    animateScroll as scroll,
-    scrollSpy,
 } from "react-scroll";
 import { useState, useEffect } from "react";
 
@@ -46,7 +43,7 @@ export default function Navbar(props) {
                         <div className="w-[172px]">
                             <img
                                 className="hover:bg-blue duration-500 cursor-pointer"
-                                src="assets\logos\white-logo.png"
+                                src="/assets/logos/white-logo.png"
                                 max-width="100%"
                                 height="auto"
                                 alt="logo"

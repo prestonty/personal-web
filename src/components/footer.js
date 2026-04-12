@@ -1,3 +1,5 @@
+'use client';
+
 import { SocialIcon } from "react-social-icons";
 
 export default function Footer() {

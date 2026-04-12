@@ -7,13 +7,13 @@ export default function AboutSection() {
 
             <p className="text-sm sm:text-base md:text-lg font-normal text-white/80 mb-6">
                 It started as fun trips to visit friends at other universities, but slowly evolved
-                into a strange obsession — attending every major Canadian university hackathon before
-                graduating.{" "}
+                into a strange obsession where I would try to attend every major Canadian university hackathon before
+                graduating. Here's my journey into the hackathon community. {" "}
                 <Link
                     href="/hackathons"
                     className="text-white underline underline-offset-4 hover:text-white/60 transition-colors duration-200"
                 >
-                    See the full list →
+                    Read more here →
                 </Link>
             </p>
 

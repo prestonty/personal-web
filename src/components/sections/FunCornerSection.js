@@ -1,5 +1,6 @@
 import Playlist from "../Playlist";
 import Laptop from "../Laptop";
+import MediaGate from "../MediaGate";
 
 export default function FunCornerSection() {
     return (
@@ -12,7 +13,9 @@ export default function FunCornerSection() {
                         Click on the laptop and press WASD!
                     </p>
                     <div className="absolute inset-0">
-                        <Laptop />
+                        <MediaGate query="(min-width: 768px)">
+                            <Laptop />
+                        </MediaGate>
                     </div>
                 </div>
             </div>

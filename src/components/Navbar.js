@@ -30,7 +30,7 @@ export default function Navbar() {
                 h-16
                 bg-nightBlack/90 backdrop-blur-sm
                 border-b border-grey
-                px-8
+                px-4 sm:px-8
                 flex items-center justify-between
                 transition-transform duration-300
                 ${visible ? "translate-y-0" : "-translate-y-full"}
@@ -46,7 +46,7 @@ export default function Navbar() {
             </Link>
 
             {/* Nav links */}
-            <ul className="flex items-center gap-8 font-work-sans font-medium text-base text-silver">
+            <ul className="flex items-center gap-4 sm:gap-8 font-work-sans font-medium text-sm sm:text-base text-silver">
                 {navLinks.map(({ label, to }) => (
                     <li key={to}>
                         <Link

@@ -3,22 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-spring/web": "^9.7.3",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.47",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.3.2",
     "drei": "^2.2.21",
     "framer-motion": "^12.23.12",
     "next": "^14.2.0",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.10.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
     "react-scroll": "^1.9.0",
-    "react-social-icons": "^6.14.0",
     "react-three-fiber": "^6.0.13",
     "tailwindcss-animated": "^1.0.1",
     "three": "^0.161.0"
@@ -33,5 +26,11 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "autoprefixer": "^10.4.27",
     "tailwindcss": "^3.4.1"
-  }
+  },
+  "browserslist": [
+    "chrome >= 100",
+    "edge >= 100",
+    "firefox >= 100",
+    "safari >= 15"
+  ]
 }

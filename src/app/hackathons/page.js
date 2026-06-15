@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const hackathons = [
     { name: "DeltaHacks 9", school: "McMaster University" },
@@ -113,18 +114,22 @@ export default function HackathonsPage() {
                     </p>
 
                     <div className="my-2 grid grid-cols-2 gap-3">
-                        <figure>
-                            <img
+                        <figure className="relative w-full h-48 sm:h-64">
+                            <Image
                                 src="/assets/blog/hackcon-bus.png"
                                 alt="The bus ride to HackCon"
-                                className="w-full rounded-xl object-cover h-48 sm:h-64"
+                                fill
+                                sizes="(max-width: 768px) 50vw, 400px"
+                                className="rounded-xl object-cover"
                             />
                         </figure>
-                        <figure>
-                            <img
+                        <figure className="relative w-full h-48 sm:h-64">
+                            <Image
                                 src="/assets/blog/nintendo-switch-bus.png"
                                 alt="Running Smash Bros on the bus to HackCon"
-                                className="w-full rounded-xl object-cover h-48 sm:h-64"
+                                fill
+                                sizes="(max-width: 768px) 50vw, 400px"
+                                className="rounded-xl object-cover"
                             />
                         </figure>
                     </div>
@@ -138,10 +143,13 @@ export default function HackathonsPage() {
                     </p>
 
                     <figure className="my-2">
-                        <img
+                        <Image
                             src="/assets/blog/hackcon-swift.jpg"
                             alt="Meeting Swift, CEO of MLH"
-                            className="w-3/4 mx-auto rounded-xl object-cover"
+                            width={1200}
+                            height={900}
+                            sizes="(max-width: 768px) 75vw, 600px"
+                            className="w-3/4 h-auto mx-auto rounded-xl object-cover"
                         />
                         <figcaption className="text-sm text-white/40 mt-2 text-center">
                             Meeting the CEO of MLH — Swift

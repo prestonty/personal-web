@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 
@@ -13,17 +14,23 @@ export default function Project(props) {
             transition={{ duration: 0.6, ease: "easeOut" }}
         >
             <a
-                className="inline-block"
+                className="block"
                 href={props.link}
                 target="_blank"
                 rel="noreferrer"
             >
-                <img
-                    className="border-4 hover:text-blue duration-500 w-full object-cover"
+                <div
+                    className="relative w-full border-4 overflow-hidden"
                     style={{ height: props.height || "300px" }}
-                    src={props.src}
-                    alt="project"
-                />
+                >
+                    <Image
+                        className="object-cover duration-500"
+                        src={props.src}
+                        alt="project"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                </div>
             </a>
 
             <div className="flex items-center justify-between gap-2 mt-4 mb-2">

@@ -6,7 +6,8 @@ import { LoadingContext } from "./LoadingContext";
 import Preloader from "./Preloader";
 
 const HERO_IMAGE = "/assets/self-photos/CircleProfile.webp";
-const MIN_DISPLAY_MS = 1200;
+const MIN_DISPLAY_DESKTOP_MS = 1200;
+const MIN_DISPLAY_MOBILE_MS = 600;
 
 export default function AppShell({ children }) {
     const [isLoading, setIsLoading] = useState(true);
@@ -20,18 +21,25 @@ export default function AppShell({ children }) {
         const previousOverflow = document.body.style.overflow;
         document.body.style.overflow = "hidden";
 
-        // Gating tasks: fonts ready + hero image loaded. We don't tie the arc
-        // directly to these (only two events makes a jumpy fill) — instead we
+        // On mobile the overlay is the floor for FCP/LCP, so keep it short and
+        // don't block on fonts (next/font loads them with `swap`, non-blocking).
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        const MIN_DISPLAY_MS = isMobile ? MIN_DISPLAY_MOBILE_MS : MIN_DISPLAY_DESKTOP_MS;
+
+        // Gating tasks: hero image loaded (+ fonts on desktop). We don't tie the
+        // arc directly to these (a couple events makes a jumpy fill) — instead we
         // flip a flag and let the rAF loop ease the arc smoothly.
         let assetsReady = false;
-        const fontsPromise = document.fonts ? document.fonts.ready : Promise.resolve();
         const imagePromise = new Promise((resolve) => {
             const img = new Image();
             img.onload = resolve;
             img.onerror = resolve;
             img.src = HERO_IMAGE;
         });
-        Promise.all([fontsPromise, imagePromise])
+        const gates = isMobile
+            ? [imagePromise]
+            : [document.fonts ? document.fonts.ready : Promise.resolve(), imagePromise];
+        Promise.all(gates)
             .then(() => {
                 assetsReady = true;
             })
